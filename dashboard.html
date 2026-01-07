@@ -3,56 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <title>Rise Extra | Company Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- CSS -->
+  <!-- Professional Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <!-- ================= HEADER ================= -->
 <header class="header">
-  <div class="header-left">
+  <div class="brand">
     <h1>RISE EXTRA</h1>
     <span>GENERAL CONTRACTING</span>
   </div>
 
+  <nav class="nav-tabs">
+    <button class="tab active" data-tab="about">About</button>
+    <button class="tab" data-tab="services">Services</button>
+    <button class="tab" data-tab="projects">Projects</button>
+    <button class="tab" data-tab="workforce">Workforce</button>
+    <button class="tab" data-tab="certificates">Certificates</button>
+    <button class="tab" data-tab="approvals">Approvals</button>
+    <button class="tab" data-tab="contact">Contact</button>
+  </nav>
+
   <a href="index.html" class="home-btn">← Home</a>
 </header>
-
-<!-- ================= NAV TABS ================= -->
-<nav class="nav-tabs">
-  <button class="tab active" data-tab="about">About</button>
-  <button class="tab" data-tab="services">Services</button>
-  <button class="tab" data-tab="projects">Projects</button>
-  <button class="tab" data-tab="workforce">Workforce</button>
-  <button class="tab" data-tab="certificates">Certificates</button>
-  <button class="tab" data-tab="approvals">Approvals</button>
-  <button class="tab" data-tab="contact">Contact</button>
-</nav>
 
 <!-- ================= CONTENT ================= -->
 <main class="content">
 
-  <!-- ===== ABOUT ===== -->
-  <section class="tab-content active" id="about">
-    <h2>About Us</h2>
-    <div class="line"></div>
-    <p>
-      Rise Extra General Contracting delivers integrated construction services across
-      civil, infrastructure, fit-out, and specialized works. With a strong presence in
-      Saudi Arabia, we support Vision 2030 through quality, safety, and innovation.
-    </p>
+  <!-- ABOUT -->
+  <section id="about" class="tab-section active">
+    <h2>Who We Are</h2>
+    <div class="divider"></div>
+
+    <div class="about-box">
+      <div>
+        <h3>Your Vision, Our Foundation</h3>
+        <p>
+          Rise Extra General Contracting delivers integrated construction services across
+          civil, infrastructure, fit-out, and specialized works. With a strong presence
+          in Saudi Arabia, we support Vision 2030 through quality, safety, and innovation.
+        </p>
+      </div>
+
+      <ul>
+        <li><strong>Location:</strong> Safa, Jeddah, Saudi Arabia</li>
+        <li><strong>Phone:</strong> +966 5333 51896</li>
+        <li><strong>Email:</strong> info@extracosa.com</li>
+      </ul>
+    </div>
+
+    <div class="grid">
+      <div class="card">Legacy of Innovation & Excellence</div>
+      <div class="card">Driving Innovation in Construction</div>
+      <div class="card">Unmatched Expertise & Professionalism</div>
+      <div class="card">Safety, Sustainability & Quality</div>
+    </div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
-  <section class="tab-content" id="services">
+  <!-- SERVICES -->
+  <section id="services" class="tab-section">
     <h2>Our Services</h2>
-    <div class="line"></div>
+    <div class="divider"></div>
 
     <div class="grid">
       <div class="card">Fit-Out Interior & Exterior</div>
@@ -64,86 +80,88 @@
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
-  <section class="tab-content" id="projects">
+  <!-- PROJECTS -->
+  <section id="projects" class="tab-section">
     <h2>Our Projects</h2>
-    <div class="line"></div>
+    <div class="divider"></div>
 
-    <div class="project-card">
-      <span class="badge">Residential</span>
+    <div class="project">
       <h3>Amir Fawaz Project</h3>
-      <p><b>PMC:</b> Almanbar Consulting</p>
-      <p><b>Scope:</b> Civil, Fit-out, MEP</p>
-      <p><b>Value:</b> 27.93 Million SAR</p>
+      <p><strong>PMC:</strong> Almanbar Consulting</p>
+      <p><strong>Scope:</strong> Civil, Fit-out, MEP</p>
+      <p><strong>Value:</strong> 27.93 Million SAR</p>
     </div>
 
-    <div class="project-card">
-      <span class="badge">GRC Works</span>
+    <div class="project">
       <h3>Red Sea – Single Villas Type B</h3>
-      <p><b>Client:</b> Red Sea</p>
-      <p><b>Scope:</b> GRC Panels & Steel Brackets</p>
-      <p><b>Value:</b> 18.05 Million SAR</p>
+      <p><strong>Client:</strong> Red Sea</p>
+      <p><strong>Scope:</strong> GRC Panels & Steel Brackets</p>
+      <p><strong>Value:</strong> 18.05 Million SAR</p>
     </div>
   </section>
 
-  <!-- ===== WORKFORCE ===== -->
-  <section class="tab-content" id="workforce">
+  <!-- WORKFORCE -->
+  <section id="workforce" class="tab-section">
     <h2>Our Workforce</h2>
-    <div class="line"></div>
-    <p>
-      Our workforce consists of highly skilled engineers, supervisors, technicians,
-      and certified labor teams trained to international safety and quality standards.
-    </p>
-  </section>
+    <div class="divider"></div>
 
-  <!-- ===== CERTIFICATES ===== -->
-  <section class="tab-content" id="certificates">
-    <h2>Our Certificates</h2>
-    <div class="line"></div>
-
-    <div class="grid small">
-      <div class="card">ISO 9001:2015</div>
-      <div class="card">ISO 14001:2015</div>
-      <div class="card">ISO 45001:2018</div>
+    <div class="grid">
+      <div class="card">Engineers & Supervisors</div>
+      <div class="card">Skilled Technicians</div>
+      <div class="card">Safety Officers</div>
+      <div class="card">Site Workforce</div>
     </div>
   </section>
 
-  <!-- ===== APPROVALS ===== -->
-  <section class="tab-content" id="approvals">
-    <h2>Our Approvals</h2>
-    <div class="line"></div>
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="tab-section">
+    <h2>Our Certificates</h2>
+    <div class="divider"></div>
 
-    <div class="grid small">
+    <div class="grid">
+      <div class="card">ISO 9001:2015 – Quality Management</div>
+      <div class="card">ISO 14001:2015 – Environmental</div>
+      <div class="card">ISO 45001:2018 – Health & Safety</div>
+    </div>
+  </section>
+
+  <!-- APPROVALS -->
+  <section id="approvals" class="tab-section">
+    <h2>Our Approvals</h2>
+    <div class="divider"></div>
+
+    <div class="grid">
       <div class="card">Red Sea Global</div>
       <div class="card">NEOM</div>
-      <div class="card">Aramco</div>
+      <div class="card">Saudi Aramco</div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section class="tab-content" id="contact">
+  <!-- CONTACT -->
+  <section id="contact" class="tab-section">
     <h2>Contact Us</h2>
-    <div class="line"></div>
+    <div class="divider"></div>
 
-    <p><b>Location:</b> Safa, Jeddah, Saudi Arabia</p>
-    <p><b>Phone:</b> +966 533351896</p>
-    <p><b>Email:</b> info@extracosa.com</p>
+    <p><strong>Address:</strong> Safa, Jeddah, Saudi Arabia</p>
+    <p><strong>Phone:</strong> +966 5333 51896</p>
+    <p><strong>Email:</strong> info@extracosa.com</p>
   </section>
 
 </main>
 
-<!-- ================= JS (TAB SWITCH) ================= -->
+<!-- ================= TAB SCRIPT ================= -->
 <script>
   const tabs = document.querySelectorAll(".tab");
-  const contents = document.querySelectorAll(".tab-content");
+  const sections = document.querySelectorAll(".tab-section");
 
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
       tabs.forEach(t => t.classList.remove("active"));
-      contents.forEach(c => c.classList.remove("active"));
+      sections.forEach(s => s.classList.remove("active"));
 
       tab.classList.add("active");
       document.getElementById(tab.dataset.tab).classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
 </script>
