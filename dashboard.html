@@ -2,17 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Rise Extra | Company Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <!-- Professional Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css">
+  <title>Rise Extra – Company Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="header">
   <div class="brand">
     <h1>RISE EXTRA</h1>
@@ -32,7 +27,7 @@
   <a href="index.html" class="home-btn">← Home</a>
 </header>
 
-<!-- ================= CONTENT ================= -->
+<!-- CONTENT -->
 <main class="content">
 
   <!-- ABOUT -->
@@ -44,9 +39,10 @@
       <div>
         <h3>Your Vision, Our Foundation</h3>
         <p>
-          Rise Extra General Contracting delivers integrated construction services across
-          civil, infrastructure, fit-out, and specialized works. With a strong presence
-          in Saudi Arabia, we support Vision 2030 through quality, safety, and innovation.
+          Rise Extra General Contracting delivers integrated construction
+          services across civil, infrastructure, fit-out, and specialized
+          works. With a strong presence in Saudi Arabia, we support Vision
+          2030 through quality, safety, and innovation.
         </p>
       </div>
 
@@ -104,13 +100,10 @@
   <section id="workforce" class="tab-section">
     <h2>Our Workforce</h2>
     <div class="divider"></div>
-
-    <div class="grid">
-      <div class="card">Engineers & Supervisors</div>
-      <div class="card">Skilled Technicians</div>
-      <div class="card">Safety Officers</div>
-      <div class="card">Site Workforce</div>
-    </div>
+    <p>
+      Our workforce consists of skilled engineers, supervisors, technicians,
+      and laborers committed to safety, efficiency, and excellence.
+    </p>
   </section>
 
   <!-- CERTIFICATES -->
@@ -119,9 +112,9 @@
     <div class="divider"></div>
 
     <div class="grid">
-      <div class="card">ISO 9001:2015 – Quality Management</div>
-      <div class="card">ISO 14001:2015 – Environmental</div>
-      <div class="card">ISO 45001:2018 – Health & Safety</div>
+      <div class="card">ISO 9001:2015</div>
+      <div class="card">ISO 14001:2015</div>
+      <div class="card">ISO 45001:2018</div>
     </div>
   </section>
 
@@ -129,12 +122,10 @@
   <section id="approvals" class="tab-section">
     <h2>Our Approvals</h2>
     <div class="divider"></div>
-
-    <div class="grid">
-      <div class="card">Red Sea Global</div>
-      <div class="card">NEOM</div>
-      <div class="card">Saudi Aramco</div>
-    </div>
+    <p>
+      Approved by major consultants, government authorities, and private
+      developers across Saudi Arabia.
+    </p>
   </section>
 
   <!-- CONTACT -->
@@ -149,19 +140,18 @@
 
 </main>
 
-<!-- ================= TAB SCRIPT ================= -->
+<!-- TAB SCRIPT (THIS FIXES YOUR ISSUE) -->
 <script>
-  const tabs = document.querySelectorAll(".tab");
-  const sections = document.querySelectorAll(".tab-section");
+  const tabs = document.querySelectorAll('.tab');
+  const sections = document.querySelectorAll('.tab-section');
 
   tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      sections.forEach(s => s.classList.remove("active"));
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
 
-      tab.classList.add("active");
-      document.getElementById(tab.dataset.tab).classList.add("active");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
     });
   });
 </script>
