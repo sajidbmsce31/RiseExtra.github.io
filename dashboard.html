@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rise Extra | Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rise Extra | Company Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FONT -->
+  <!-- PROFESSIONAL FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="header">
-  <div class="brand">
-    <img src="assets/images/logo.jpg" alt="Rise Extra Logo">
-    <h1>Company Dashboard</h1>
+  <div class="header-inner">
+    <h1>Rise Extra</h1>
+    <span>General Contracting – Company Dashboard</span>
   </div>
 </header>
 
@@ -37,64 +37,63 @@
   <section id="about" class="section active">
     <h2>About Us</h2>
     <p>
-      Rise Extra General Contracting delivers integrated construction services
-      across Saudi Arabia. We align with Vision 2030 through quality, safety,
-      and innovation.
+      Rise Extra General Contracting delivers integrated construction solutions
+      across Saudi Arabia. We support Vision 2030 through quality execution,
+      safety compliance, and sustainable practices.
     </p>
   </section>
 
   <section id="services" class="section">
-    <h2>Services</h2>
+    <h2>Our Services</h2>
     <div class="grid">
       <div class="card">Fit-Out Interior & Exterior</div>
       <div class="card">Civil & Steel Structures</div>
       <div class="card">Facade Works</div>
-      <div class="card">Infrastructure</div>
-      <div class="card">Maintenance</div>
+      <div class="card">Infrastructure Development</div>
+      <div class="card">Maintenance Services</div>
       <div class="card">Prefab Works</div>
     </div>
   </section>
 
   <section id="projects" class="section">
-    <h2>Projects</h2>
+    <h2>Key Projects</h2>
     <div class="grid">
-      <div class="card">Amir Fawaz Project – Saudi Arabia</div>
-      <div class="card">Commercial Fit-Out – Jeddah</div>
+      <div class="card">Residential & Commercial Developments</div>
+      <div class="card">Industrial & Infrastructure Projects</div>
     </div>
   </section>
 
   <section id="workforce" class="section">
     <h2>Workforce</h2>
-    <div class="image-grid">
-      <img src="assets/images/worker1.jpeg">
-      <img src="assets/images/worker2.jpeg">
-    </div>
+    <p>
+      Our workforce consists of skilled engineers, supervisors, and technicians
+      trained to meet international construction standards.
+    </p>
   </section>
 
   <section id="certificates" class="section">
-    <h2>Certificates</h2>
-    <div class="image-grid small">
-      <img src="assets/images/cert1.jpeg">
-      <img src="assets/images/cert2.jpeg">
-       <img src="assets/images/cert3.jpeg">
-    </div>
+    <h2>Certificates & Approvals</h2>
+    <p>
+      ISO-certified operations and approvals from recognized authorities.
+    </p>
   </section>
 
   <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>Safa, Jeddah, Saudi Arabia</p>
-    <p>📞 +966533351896</p>
-    <p>✉ info@extracosa.com</p>
+    <p><strong>Location:</strong> Safa, Jeddah, Saudi Arabia</p>
+    <p><strong>Phone:</strong> +966 5333 51896</p>
+    <p><strong>Email:</strong> info@extracosa.com</p>
   </section>
 
 </main>
 
+<!-- TAB SCRIPT -->
 <script>
-function openTab(id, btn) {
+function openTab(id, el) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
+  el.classList.add('active');
 }
 </script>
 
