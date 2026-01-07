@@ -1,151 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Rise Extra | Company Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="header">
-  <div class="header-inner">
-    <div class="brand">
-      <h1>RISE EXTRA</h1>
-      <span>GENERAL CONTRACTING</span>
-    </div>
-
-   <nav class="nav-tabs">
-  <a href="#about" class="tab-link">About</a>
-  <a href="#services" class="tab-link">Services</a>
-  <a href="#projects" class="tab-link active">Projects</a>
-  <a href="#workforce" class="tab-link">Workforce</a>
-  <a href="#certificates" class="tab-link">Certificates</a>
-  <a href="#approvals" class="tab-link">Approvals</a>
-  <a href="#contact" class="tab-link">Contact</a>
-</nav>
-
-
-    <a href="index.html" class="back-btn">← Home</a>
+  <div class="header-left">
+    <h1>RISE EXTRA</h1>
+    <span>GENERAL CONTRACTING</span>
   </div>
+
+  <a href="index.html" class="home-btn">← Home</a>
 </header>
 
-<!-- MAIN CONTENT -->
-<main class="container">
+<!-- ================= NAV TABS ================= -->
+<nav class="nav-tabs">
+  <button class="tab active" data-tab="about">About</button>
+  <button class="tab" data-tab="services">Services</button>
+  <button class="tab" data-tab="projects">Projects</button>
+  <button class="tab" data-tab="workforce">Workforce</button>
+  <button class="tab" data-tab="certificates">Certificates</button>
+  <button class="tab" data-tab="approvals">Approvals</button>
+  <button class="tab" data-tab="contact">Contact</button>
+</nav>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2 class="section-title">About Us</h2>
-    <div class="info-card">
+<!-- ================= CONTENT ================= -->
+<main class="content">
+
+  <!-- ===== ABOUT ===== -->
+  <section class="tab-content active" id="about">
+    <h2>About Us</h2>
+    <div class="line"></div>
+    <p>
       Rise Extra General Contracting delivers integrated construction services across
-      civil, infrastructure, fit-out, and specialized works, supporting Vision 2030
-      through quality, safety, and innovation.
-    </div>
+      civil, infrastructure, fit-out, and specialized works. With a strong presence in
+      Saudi Arabia, we support Vision 2030 through quality, safety, and innovation.
+    </p>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <h2 class="section-title">Our Services</h2>
+  <!-- ===== SERVICES ===== -->
+  <section class="tab-content" id="services">
+    <h2>Our Services</h2>
+    <div class="line"></div>
+
     <div class="grid">
-      <div class="service-box">Fit-Out Interior & Exterior</div>
-      <div class="service-box">Civil & Steel Structures</div>
-      <div class="service-box">Facade Works</div>
-      <div class="service-box">Infrastructure</div>
-      <div class="service-box">Maintenance</div>
-      <div class="service-box">Prefab Works</div>
+      <div class="card">Fit-Out Interior & Exterior</div>
+      <div class="card">Civil & Steel Structures</div>
+      <div class="card">Facade Works</div>
+      <div class="card">Infrastructure</div>
+      <div class="card">Maintenance</div>
+      <div class="card">Prefab Works</div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2 class="section-title">Our Projects</h2>
+  <!-- ===== PROJECTS ===== -->
+  <section class="tab-content" id="projects">
+    <h2>Our Projects</h2>
+    <div class="line"></div>
 
     <div class="project-card">
+      <span class="badge">Residential</span>
       <h3>Amir Fawaz Project</h3>
-      <p><strong>PMC:</strong> Almanbar Consulting</p>
-      <p><strong>Scope:</strong> Civil, Fit-out, MEP</p>
-      <p><strong>Value:</strong> 27.93 Million SAR</p>
+      <p><b>PMC:</b> Almanbar Consulting</p>
+      <p><b>Scope:</b> Civil, Fit-out, MEP</p>
+      <p><b>Value:</b> 27.93 Million SAR</p>
     </div>
 
     <div class="project-card">
+      <span class="badge">GRC Works</span>
       <h3>Red Sea – Single Villas Type B</h3>
-      <p><strong>Client:</strong> Red Sea</p>
-      <p><strong>Scope:</strong> GRC Panels & Steel Brackets</p>
-      <p><strong>Value:</strong> 18.05 Million SAR</p>
+      <p><b>Client:</b> Red Sea</p>
+      <p><b>Scope:</b> GRC Panels & Steel Brackets</p>
+      <p><b>Value:</b> 18.05 Million SAR</p>
     </div>
   </section>
 
-  <!-- WORKFORCE -->
-  <section id="workforce">
-    <h2 class="section-title">Our Workforce</h2>
-    <div class="info-card">
-      Highly trained engineers, supervisors, and skilled workers committed to safety,
-      efficiency, and excellence on every project.
-    </div>
+  <!-- ===== WORKFORCE ===== -->
+  <section class="tab-content" id="workforce">
+    <h2>Our Workforce</h2>
+    <div class="line"></div>
+    <p>
+      Our workforce consists of highly skilled engineers, supervisors, technicians,
+      and certified labor teams trained to international safety and quality standards.
+    </p>
   </section>
 
-  <!-- CERTIFICATES -->
-  <section id="certificates">
-    <h2 class="section-title">Certificates</h2>
+  <!-- ===== CERTIFICATES ===== -->
+  <section class="tab-content" id="certificates">
+    <h2>Our Certificates</h2>
+    <div class="line"></div>
+
     <div class="grid small">
-      <div class="doc-box">ISO 9001:2015</div>
-      <div class="doc-box">ISO 14001:2015</div>
-      <div class="doc-box">ISO 45001:2018</div>
+      <div class="card">ISO 9001:2015</div>
+      <div class="card">ISO 14001:2015</div>
+      <div class="card">ISO 45001:2018</div>
     </div>
   </section>
 
-  <!-- APPROVALS -->
-  <section id="approvals">
-    <h2 class="section-title">Approvals</h2>
+  <!-- ===== APPROVALS ===== -->
+  <section class="tab-content" id="approvals">
+    <h2>Our Approvals</h2>
+    <div class="line"></div>
+
     <div class="grid small">
-      <div class="doc-box">Municipality Approval</div>
-      <div class="doc-box">Red Sea Approval</div>
-      <div class="doc-box">Client Prequalification</div>
+      <div class="card">Red Sea Global</div>
+      <div class="card">NEOM</div>
+      <div class="card">Aramco</div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div class="info-card">
-      Safa, Jeddah, Saudi Arabia<br>
-      📞 +966533351896<br>
-      ✉ info@extracosa.com
-    </div>
+  <!-- ===== CONTACT ===== -->
+  <section class="tab-content" id="contact">
+    <h2>Contact Us</h2>
+    <div class="line"></div>
+
+    <p><b>Location:</b> Safa, Jeddah, Saudi Arabia</p>
+    <p><b>Phone:</b> +966 533351896</p>
+    <p><b>Email:</b> info@extracosa.com</p>
   </section>
 
 </main>
 
-<footer class="footer">
-  © Rise Extra General Contracting
-</footer>
+<!-- ================= JS (TAB SWITCH) ================= -->
 <script>
-  const tabs = document.querySelectorAll('.tab-link');
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
 
   tabs.forEach(tab => {
-    tab.addEventListener('click', function (e) {
-      e.preventDefault();
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
 
-      // Remove active class
-      tabs.forEach(t => t.classList.remove('active'));
-
-      // Add active to clicked
-      this.classList.add('active');
-
-      // Smooth scroll
-      const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.tab).classList.add("active");
     });
   });
 </script>
 
 </body>
 </html>
-
