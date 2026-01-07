@@ -31,17 +31,18 @@
 </section>
 
 <!-- TABS -->
-<div class="tabs-wrapper">
+<nav class="tabs-wrapper">
   <div class="tabs">
-    <div class="tab active" onclick="scrollToSection('about')">About</div>
-    <div class="tab" onclick="scrollToSection('services')">Services</div>
-    <div class="tab" onclick="scrollToSection('projects')">Projects</div>
-    <div class="tab" onclick="scrollToSection('workforce')">Workforce</div>
-    <div class="tab" onclick="scrollToSection('certificates')">Certificates</div>
-    <div class="tab" onclick="scrollToSection('contact')">Contact</div>
-    <div class="tab admin" onclick="scrollToSection('admin')">Admin</div>
+    <div class="tab active" data-target="about" onclick="scrollToSection('about')">About</div>
+    <div class="tab" data-target="services" onclick="scrollToSection('services')">Services</div>
+    <div class="tab" data-target="projects" onclick="scrollToSection('projects')">Projects</div>
+    <div class="tab" data-target="workforce" onclick="scrollToSection('workforce')">Workforce</div>
+    <div class="tab" data-target="certificates" onclick="scrollToSection('certificates')">Certificates</div>
+    <div class="tab" data-target="contact" onclick="scrollToSection('contact')">Contact</div>
+    <div class="tab admin" data-target="admin" onclick="scrollToSection('admin')">Admin</div>
   </div>
-</div>
+</nav>
+
 
 <!-- ABOUT -->
 <section id="about" class="container">
@@ -127,6 +128,45 @@
   © 2026 Rise Extra General Contracting
 </footer>
 
-<script src="script.js"></script>
+<script>
+const tabs = document.querySelectorAll(".tab");
+const sections = document.querySelectorAll(".section");
+
+/* CLICK → SCROLL + ACTIVE */
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+
+  tabs.forEach(tab => tab.classList.remove("active"));
+  const activeTab = document.querySelector(`.tab[data-target="${id}"]`);
+  if (activeTab) activeTab.classList.add("active");
+}
+
+/* SCROLL → AUTO ACTIVE TAB */
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  tabs.forEach(tab => {
+    tab.classList.remove("active");
+    if (tab.dataset.target === current) {
+      tab.classList.add("active");
+    }
+  });
+});
+
+/* LANGUAGE TOGGLE */
+function toggleLang() {
+  const html = document.getElementById("htmlRoot");
+  html.dir = html.dir === "rtl" ? "ltr" : "rtl";
+}
+</script>
+
 </body>
 </html>
+
