@@ -15,15 +15,16 @@
       <span>GENERAL CONTRACTING</span>
     </div>
 
-    <nav class="nav-tabs">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects" class="active">Projects</a>
-      <a href="#workforce">Workforce</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#approvals">Approvals</a>
-      <a href="#contact">Contact</a>
-    </nav>
+   <nav class="nav-tabs">
+  <a href="#about" class="tab-link">About</a>
+  <a href="#services" class="tab-link">Services</a>
+  <a href="#projects" class="tab-link active">Projects</a>
+  <a href="#workforce" class="tab-link">Workforce</a>
+  <a href="#certificates" class="tab-link">Certificates</a>
+  <a href="#approvals" class="tab-link">Approvals</a>
+  <a href="#contact" class="tab-link">Contact</a>
+</nav>
+
 
     <a href="index.html" class="back-btn">← Home</a>
   </div>
@@ -118,6 +119,33 @@
 <footer class="footer">
   © Rise Extra General Contracting
 </footer>
+<script>
+  const tabs = document.querySelectorAll('.tab-link');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Remove active class
+      tabs.forEach(t => t.classList.remove('active'));
+
+      // Add active to clicked
+      this.classList.add('active');
+
+      // Smooth scroll
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
+
