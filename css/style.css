@@ -1,6 +1,6 @@
 /* =====================================================
    RISE EXTRA – ENTERPRISE CONSTRUCTION DASHBOARD
-   Authoritative | Executive | Tender-Ready
+   Executive • Professional • Tender-Ready
 ===================================================== */
 
 /* ---------- DESIGN TOKENS ---------- */
@@ -93,7 +93,7 @@ body {
   overflow: hidden;
   background: url("assets/images/hero-bg.jpg") center/cover no-repeat;
   box-shadow: var(--shadow-strong);
-  margin-bottom: 110px;
+  margin-bottom: 90px;
 }
 
 .hero-pro::before {
@@ -139,7 +139,6 @@ body {
   max-width: 600px;
 }
 
-/* CTA */
 .hero-btn {
   margin-top: 42px;
   width: fit-content;
@@ -175,7 +174,7 @@ body {
 }
 
 /* =====================================================
-   CARDS – PREMIUM
+   CARDS
 ===================================================== */
 .about-card,
 .project-card {
@@ -184,7 +183,7 @@ body {
   padding: 48px;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-soft);
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 
 .about-card {
@@ -196,14 +195,25 @@ body {
   color: var(--text-muted);
 }
 
+.project-card h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.project-meta {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
 /* =====================================================
-   SERVICES – EXECUTIVE GRID
+   SERVICES GRID
 ===================================================== */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 34px;
-  margin-bottom: 110px;
+  margin-bottom: 100px;
 }
 
 .service-card {
@@ -224,17 +234,64 @@ body {
 }
 
 /* =====================================================
-   PROJECTS
+   ENTERPRISE TABS
 ===================================================== */
-.project-card h3 {
-  font-size: 28px;
-  margin-bottom: 16px;
+.tabs-container {
+  margin-bottom: 60px;
 }
 
-.project-meta {
-  font-size: 16px;
+.tabs {
+  display: flex;
+  gap: 12px;
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 14px 30px;
+  font-size: 15px;
+  font-weight: 600;
   color: var(--text-muted);
-  line-height: 1.9;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+  background: #f1f5f9;
+  color: var(--navy);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--navy), var(--navy-soft));
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(11,26,46,0.45);
+}
+
+.tab-content {
+  display: none;
+  margin-top: 50px;
+  animation: tabFadeUp 0.35s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes tabFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =====================================================
@@ -250,7 +307,7 @@ body {
 }
 
 .footer strong {
-  color: #fff;
+  color: #ffffff;
 }
 
 /* =====================================================
