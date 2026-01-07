@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- MAIN CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -14,13 +14,13 @@
 <div class="sidebar">
   <h1>RISE EXTRA</h1>
 
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#projects">Projects</a>
-  <a href="#workers">Workforce</a>
-  <a href="#certificates">Certificates</a>
-  <a href="#approvals">Approvals</a>
-  <a href="#contact">Contact</a>
+  <a href="#" onclick="openTabByName('about')">About</a>
+  <a href="#" onclick="openTabByName('services')">Services</a>
+  <a href="#" onclick="openTabByName('projects')">Projects</a>
+  <a href="#" onclick="openTabByName('workers')">Workforce</a>
+  <a href="#" onclick="openTabByName('certificates')">Certificates</a>
+  <a href="#" onclick="openTabByName('approvals')">Approvals</a>
+  <a href="#" onclick="openTabByName('contact')">Contact</a>
 </div>
 
 <!-- ================= MAIN ================= -->
@@ -35,12 +35,29 @@
         Delivering high-impact construction solutions across Saudi Arabia,
         aligned with Vision 2030 and international standards.
       </p>
-      <a href="#projects" class="hero-btn">View Flagship Projects</a>
+      <a href="#" class="hero-btn" onclick="openTabByName('projects')">
+        View Flagship Projects
+      </a>
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section id="about">
+  <!-- ================= TABS ================= -->
+  <div class="tabs-container">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="openTab(event,'about')">About</button>
+      <button class="tab-btn" onclick="openTab(event,'services')">Services</button>
+      <button class="tab-btn" onclick="openTab(event,'projects')">Projects</button>
+      <button class="tab-btn" onclick="openTab(event,'workers')">Workforce</button>
+      <button class="tab-btn" onclick="openTab(event,'certificates')">Certificates</button>
+      <button class="tab-btn" onclick="openTab(event,'approvals')">Approvals</button>
+      <button class="tab-btn" onclick="openTab(event,'contact')">Contact</button>
+    </div>
+  </div>
+
+  <!-- ================= TAB CONTENTS ================= -->
+
+  <!-- ABOUT -->
+  <div id="about" class="tab-content active">
     <h2 class="section-title">About Us</h2>
     <div class="section-underline"></div>
 
@@ -49,13 +66,13 @@
         Rise Extra General Contracting delivers integrated construction services
         across civil, infrastructure, fit-out, and specialized works.
         With a strong operational presence in Saudi Arabia, we support
-        national development goals through quality, safety, and innovation.
+        Vision 2030 through quality, safety, and innovation.
       </p>
     </div>
-  </section>
+  </div>
 
-  <!-- ================= SERVICES ================= -->
-  <section id="services">
+  <!-- SERVICES -->
+  <div id="services" class="tab-content">
     <h2 class="section-title">Our Services</h2>
     <div class="section-underline"></div>
 
@@ -68,10 +85,10 @@
       <div class="service-card">Maintenance</div>
       <div class="service-card">Prefab Works</div>
     </div>
-  </section>
+  </div>
 
-  <!-- ================= PROJECTS ================= -->
-  <section id="projects">
+  <!-- PROJECTS -->
+  <div id="projects" class="tab-content">
     <h2 class="section-title">Our Projects</h2>
     <div class="section-underline"></div>
 
@@ -81,18 +98,7 @@
         <strong>Location:</strong> Saudi Arabia<br>
         <strong>PMC:</strong> Almanbar Consulting<br>
         <strong>Scope:</strong> Civil, Fit-Out, MEP<br>
-        <strong>Main Contractor:</strong> CGCC China Overseas Construction<br>
         <strong>Project Value:</strong> 27.93 Million SAR
-      </div>
-    </div>
-
-    <div class="project-card">
-      <h3>Roshan Al Arous – Jeddah</h3>
-      <div class="project-meta">
-        <strong>PMC:</strong> AJ Consultants<br>
-        <strong>Scope:</strong> Civil, Fit-Out, MEP (100 Villas)<br>
-        <strong>Main Contractor:</strong> ABR Contracting Co<br>
-        <strong>Project Value:</strong> 18.28 Million SAR
       </div>
     </div>
 
@@ -101,54 +107,51 @@
       <div class="project-meta">
         <strong>PMC:</strong> Diyar Consultants<br>
         <strong>Scope:</strong> Civil Structure Works<br>
-        <strong>Main Contractor:</strong> Al Masarat Contracting Co<br>
         <strong>Project Value:</strong> 21 Million SAR
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ================= WORKFORCE ================= -->
-  <section id="workers">
+  <!-- WORKERS -->
+  <div id="workers" class="tab-content">
     <h2 class="section-title">Our Workforce</h2>
     <div class="section-underline"></div>
 
     <div class="about-card">
       <p>
-        Our workforce is trained, certified, and fully compliant with
-        international safety standards. All personnel operate under strict PPE
-        and ISO 45001 safety procedures to ensure operational excellence.
+        Our workforce operates under strict PPE and ISO 45001 safety procedures,
+        ensuring productivity, compliance, and excellence across all sites.
       </p>
     </div>
-  </section>
+  </div>
 
-  <!-- ================= CERTIFICATES ================= -->
-  <section id="certificates">
-    <h2 class="section-title">Our Certifications</h2>
+  <!-- CERTIFICATES -->
+  <div id="certificates" class="tab-content">
+    <h2 class="section-title">Certifications</h2>
     <div class="section-underline"></div>
 
     <div class="services-grid">
-      <div class="service-card">ISO 9001:2015 – Quality Management</div>
-      <div class="service-card">ISO 14001:2015 – Environmental Management</div>
-      <div class="service-card">ISO 45001:2018 – Occupational Health & Safety</div>
+      <div class="service-card">ISO 9001:2015 – Quality</div>
+      <div class="service-card">ISO 14001:2015 – Environment</div>
+      <div class="service-card">ISO 45001:2018 – Safety</div>
     </div>
-  </section>
+  </div>
 
-  <!-- ================= APPROVALS ================= -->
-  <section id="approvals">
-    <h2 class="section-title">Our Approvals</h2>
+  <!-- APPROVALS -->
+  <div id="approvals" class="tab-content">
+    <h2 class="section-title">Approvals</h2>
     <div class="section-underline"></div>
 
     <div class="about-card">
       <p>
         Approved by major developers, consultants, and government authorities
-        including Red Sea Global, Bechtel, Diyar Consultants, and leading
-        institutions across the Kingdom of Saudi Arabia.
+        across the Kingdom of Saudi Arabia.
       </p>
     </div>
-  </section>
+  </div>
 
-  <!-- ================= CONTACT ================= -->
-  <section id="contact">
+  <!-- CONTACT -->
+  <div id="contact" class="tab-content">
     <h2 class="section-title">Contact Us</h2>
     <div class="section-underline"></div>
 
@@ -160,15 +163,35 @@
         ✉ info@extracosa.com
       </p>
     </div>
-  </section>
+  </div>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
   <footer class="footer">
     <strong>Rise Extra General Contracting</strong><br>
     © 2026 • All Rights Reserved
   </footer>
 
 </div>
+
+<!-- ================= TAB SCRIPT ================= -->
+<script>
+function openTab(evt, tabId) {
+  const contents = document.querySelectorAll(".tab-content");
+  const tabs = document.querySelectorAll(".tab-btn");
+
+  contents.forEach(c => c.classList.remove("active"));
+  tabs.forEach(t => t.classList.remove("active"));
+
+  document.getElementById(tabId).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
+
+function openTabByName(tabId) {
+  const btn = [...document.querySelectorAll(".tab-btn")]
+    .find(b => b.textContent.toLowerCase() === tabId);
+  if (btn) btn.click();
+}
+</script>
 
 </body>
 </html>
