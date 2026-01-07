@@ -1,51 +1,71 @@
-/* RESET */
+/* ==================================================
+   GOOGLE FONTS REQUIRED
+================================================== */
+/*
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+*/
+
+/* ==================================================
+   GLOBAL RESET
+================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", "Segoe UI", sans-serif;
 }
 
 body {
-  background: #eef2f6;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f4f7fb;
   color: #1f2933;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* =========================
-   HEADER / LOGO
-========================= */
+/* ==================================================
+   HEADINGS
+================================================== */
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #0b1f33;
+}
+
+/* ==================================================
+   LOGO HEADER
+================================================== */
 .top-header {
   position: absolute;
-  top: 30px;
-  left: 40px;
+  top: 28px;
+  left: 48px;
   z-index: 10;
 }
 
 .top-header img {
-  height: 48px;
-  width: auto;
+  height: 52px;
 }
 
-/* =========================
+/* ==================================================
    HERO SECTION
-========================= */
+================================================== */
 .hero {
   min-height: 100vh;
   background: linear-gradient(
     135deg,
     #0b1f33 0%,
-    #243f5e 50%,
-    #4f6f8f 100%
+    #243f5e 55%,
+    #6b8ba4 100%
   );
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 90px 24px;
 }
 
 .hero-content {
-  text-align: center;
   max-width: 900px;
+  text-align: center;
   color: #ffffff;
 }
 
@@ -53,47 +73,154 @@ body {
   font-size: 64px;
   font-weight: 800;
   letter-spacing: 4px;
-  margin-bottom: 12px;
+  color: #ffffff;
+  margin-bottom: 14px;
 }
 
 .hero-content h2 {
   font-size: 24px;
-  font-weight: 600;
   letter-spacing: 3px;
-  color: #d4af37; /* gold */
-  margin-bottom: 24px;
+  color: #d4af37;
+  margin-bottom: 28px;
 }
 
 .hero-content p {
   font-size: 18px;
-  line-height: 1.7;
-  color: #e5e7eb;
-  margin-bottom: 40px;
+  color: #e6ebf1;
+  margin-bottom: 44px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+/* ==================================================
+   PRIMARY BUTTON
+================================================== */
 .primary-btn {
   display: inline-block;
-  padding: 16px 42px;
+  padding: 16px 48px;
   background: linear-gradient(135deg, #d4af37, #c9a227);
   color: #0b1f33;
   font-weight: 700;
+  letter-spacing: 1px;
   border-radius: 40px;
   text-decoration: none;
-  font-size: 16px;
   transition: all 0.3s ease;
 }
 
 .primary-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 18px 40px rgba(212, 175, 55, 0.45);
 }
 
-/* =========================
+/* ==================================================
+   MAIN CONTAINER
+================================================== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 24px;
+}
+
+/* ==================================================
+   TABS NAVIGATION (PROFESSIONAL)
+================================================== */
+.tabs {
+  display: flex;
+  gap: 14px;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 14px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #5b6b7a;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background: #eef2f6;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #0b1f33, #243f5e);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(11, 31, 51, 0.35);
+}
+
+/* ==================================================
+   SECTION HEADINGS
+================================================== */
+.section-title {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.section-underline {
+  width: 60px;
+  height: 4px;
+  background: #d4af37;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+/* ==================================================
+   CARDS (SERVICES / PROJECTS)
+================================================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 15px;
+  color: #4b5b6b;
+}
+
+/* ==================================================
+   FOOTER / CONTACT
+================================================== */
+.footer {
+  background: #0b1f33;
+  color: #e6ebf1;
+  padding: 50px 24px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 15px;
+}
+
+/* ==================================================
    RESPONSIVE
-========================= */
+================================================== */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 42px;
@@ -101,6 +228,15 @@ body {
 
   .hero-content h2 {
     font-size: 18px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tab {
+    flex: 1 1 45%;
   }
 
   .top-header {
