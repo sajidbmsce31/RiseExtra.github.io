@@ -1,16 +1,33 @@
-/* ===== GLOBAL ===== */
+/* =============================
+   GLOBAL RESET & VARIABLES
+============================= */
+:root {
+  --navy: #0f1e36;
+  --gold: #c9a24d;
+  --light: #f4f7fb;
+  --dark-text: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #f3f5f9;
-  color: #1f2937;
+  background: var(--light);
+  color: var(--dark-text);
 }
 
-/* ===== HERO ===== */
+/* =============================
+   HERO SECTION
+============================= */
 .hero {
-  height: 100vh;
-  background:
-    linear-gradient(rgba(10, 20, 40, 0.75), rgba(10, 20, 40, 0.75)),
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(15, 30, 54, 0.85),
+      rgba(15, 30, 54, 0.85)
+    ),
     url("assets/images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -22,7 +39,8 @@ body {
 .hero-content {
   text-align: center;
   color: white;
-  max-width: 800px;
+  max-width: 900px;
+  padding: 20px;
 }
 
 .hero h1 {
@@ -34,7 +52,6 @@ body {
 
 .hero h2 {
   font-size: 26px;
-  font-weight: 400;
   letter-spacing: 2px;
   margin-bottom: 20px;
   color: #e5e7eb;
@@ -47,27 +64,28 @@ body {
 }
 
 /* CTA */
-.cta-btn {
+.hero a {
   display: inline-block;
-  background: #c9a24d;
-  color: #0f1e36;
+  background: var(--gold);
+  color: var(--navy);
   padding: 16px 40px;
-  font-size: 16px;
   font-weight: 700;
   border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.cta-btn:hover {
+.hero a:hover {
   background: #e0b85f;
   transform: translateY(-3px);
 }
 
-/* ===== ABOUT ===== */
-.about-section {
+/* =============================
+   ABOUT SECTION
+============================= */
+.about {
   background: white;
-  padding: 100px 20px;
+  padding: 90px 20px;
 }
 
 .about-container {
@@ -83,7 +101,7 @@ body {
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  border-top: 6px solid #c9a24d;
+  border-top: 6px solid var(--gold);
 }
 
 .about-card h3 {
@@ -92,14 +110,16 @@ body {
 }
 
 .about-card p {
-  font-size: 16px;
   line-height: 1.7;
+  font-size: 16px;
   color: #374151;
 }
 
-/* ===== FOOTER ===== */
+/* =============================
+   FOOTER
+============================= */
 .footer {
-  background: #0f1e36;
+  background: var(--navy);
   color: #cbd5e1;
   padding: 40px 20px;
   text-align: center;
@@ -109,7 +129,9 @@ body {
   color: white;
 }
 
-/* ===== RESPONSIVE ===== */
+/* =============================
+   RESPONSIVE
+============================= */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 42px;
