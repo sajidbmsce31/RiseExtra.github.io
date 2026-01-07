@@ -3,100 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <title>Rise Extra | Company Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- PROFESSIONAL FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="header-inner">
-    <h1>Rise Extra</h1>
-    <span>General Contracting – Company Dashboard</span>
-  </div>
+<header class="top-header">
+  <div class="logo">RISE EXTRA</div>
+  <div class="subtitle">General Contracting</div>
 </header>
 
-<!-- TABS -->
 <nav class="tabs">
-  <button class="tab active" onclick="openTab('about', this)">About</button>
-  <button class="tab" onclick="openTab('services', this)">Services</button>
-  <button class="tab" onclick="openTab('projects', this)">Projects</button>
-  <button class="tab" onclick="openTab('workforce', this)">Workforce</button>
-  <button class="tab" onclick="openTab('certificates', this)">Certificates</button>
-  <button class="tab" onclick="openTab('contact', this)">Contact</button>
+  <button class="tab active" data-tab="about">About</button>
+  <button class="tab" data-tab="services">Services</button>
+  <button class="tab" data-tab="projects">Projects</button>
+  <button class="tab" data-tab="workforce">Workforce</button>
+  <button class="tab" data-tab="certificates">Certificates</button>
+  <button class="tab" data-tab="approvals">Approvals</button>
+  <button class="tab" data-tab="contact">Contact</button>
 </nav>
 
-<!-- CONTENT -->
-<main class="container">
+<main class="content">
 
-  <section id="about" class="section active">
-    <h2>About Us</h2>
-    <p>
-      Rise Extra General Contracting delivers integrated construction solutions
-      across Saudi Arabia. We support Vision 2030 through quality execution,
-      safety compliance, and sustainable practices.
-    </p>
+  <!-- ABOUT -->
+  <section id="about" class="tab-content active">
+    <h2>Who We Are</h2>
+    <div class="card">
+      <p>
+        Rise Extra General Contracting delivers integrated construction services
+        across civil, infrastructure, fit-out, and specialized works.
+        With a strong presence in Saudi Arabia, we support Vision 2030 through
+        quality, safety, and innovation.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="info-box">
+        <h3>Legacy of Excellence</h3>
+        <p>Over decades of delivering high-quality projects across KSA.</p>
+      </div>
+      <div class="info-box">
+        <h3>Safety & Sustainability</h3>
+        <p>Committed to international safety and environmental standards.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="services" class="section">
+  <!-- SERVICES -->
+  <section id="services" class="tab-content">
     <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card">Fit-Out Interior & Exterior</div>
-      <div class="card">Civil & Steel Structures</div>
-      <div class="card">Facade Works</div>
-      <div class="card">Infrastructure Development</div>
-      <div class="card">Maintenance Services</div>
-      <div class="card">Prefab Works</div>
+    <div class="grid-3">
+      <div class="service-card">Fit-Out Interior & Exterior</div>
+      <div class="service-card">Civil & Steel Structures</div>
+      <div class="service-card">Facade Works</div>
+      <div class="service-card">Infrastructure</div>
+      <div class="service-card">Maintenance</div>
+      <div class="service-card">Prefab Works</div>
     </div>
   </section>
 
-  <section id="projects" class="section">
-    <h2>Key Projects</h2>
-    <div class="grid">
-      <div class="card">Residential & Commercial Developments</div>
-      <div class="card">Industrial & Infrastructure Projects</div>
+  <!-- PROJECTS -->
+  <section id="projects" class="tab-content">
+    <h2>Our Projects</h2>
+
+    <div class="project-card">
+      <h3>Amir Fawaz Project</h3>
+      <ul>
+        <li><strong>PMC:</strong> Almnabr Consulting</li>
+        <li><strong>Scope:</strong> Civil, Fit-out, MEP</li>
+        <li><strong>Value:</strong> 27.93 Million SAR</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h3>Red Sea – Single Villas Type B</h3>
+      <ul>
+        <li><strong>Client:</strong> Red Sea</li>
+        <li><strong>Scope:</strong> GRC Panels & Steel Brackets</li>
+        <li><strong>Value:</strong> 18.05 Million SAR</li>
+      </ul>
     </div>
   </section>
 
-  <section id="workforce" class="section">
-    <h2>Workforce</h2>
-    <p>
-      Our workforce consists of skilled engineers, supervisors, and technicians
-      trained to meet international construction standards.
-    </p>
+  <!-- WORKFORCE -->
+  <section id="workforce" class="tab-content">
+    <h2>Our Workforce</h2>
+    <div class="card">
+      <p>
+        Highly trained workforce following strict safety protocols,
+        site inductions, and international best practices.
+      </p>
+    </div>
+
+    <div class="grid-4 placeholder">
+      <div class="img-box">Worker Image</div>
+      <div class="img-box">Worker Image</div>
+      <div class="img-box">Worker Image</div>
+      <div class="img-box">Worker Image</div>
+    </div>
   </section>
 
-  <section id="certificates" class="section">
-    <h2>Certificates & Approvals</h2>
-    <p>
-      ISO-certified operations and approvals from recognized authorities.
-    </p>
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="tab-content">
+    <h2>Our Certificates</h2>
+    <div class="grid-3 placeholder">
+      <div class="img-box">ISO 9001</div>
+      <div class="img-box">ISO 14001</div>
+      <div class="img-box">ISO 45001</div>
+    </div>
   </section>
 
-  <section id="contact" class="section">
+  <!-- APPROVALS -->
+  <section id="approvals" class="tab-content">
+    <h2>Our Approvals</h2>
+    <div class="grid-3 placeholder">
+      <div class="img-box">Approval Document</div>
+      <div class="img-box">Approval Document</div>
+      <div class="img-box">Approval Document</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="tab-content">
     <h2>Contact</h2>
-    <p><strong>Location:</strong> Safa, Jeddah, Saudi Arabia</p>
-    <p><strong>Phone:</strong> +966 5333 51896</p>
-    <p><strong>Email:</strong> info@extracosa.com</p>
+    <div class="card">
+      <p>Safa, Jeddah, Saudi Arabia</p>
+      <p>📞 +966 5333 51896</p>
+      <p>✉ info@extracosa.com</p>
+    </div>
   </section>
 
 </main>
 
-<!-- TAB SCRIPT -->
 <script>
-function openTab(id, el) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  el.classList.add('active');
-}
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+  });
 </script>
 
 </body>
 </html>
-
