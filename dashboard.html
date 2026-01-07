@@ -1,109 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Rise Extra Dashboard</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Rise Extra | Company Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="container-fluid">
-  <div class="row">
+<!-- ================= SIDEBAR ================= -->
+<div class="sidebar">
+  <h1>RISE EXTRA</h1>
 
-    <!-- Sidebar -->
-    <nav class="col-md-2 sidebar">
-      <h4>RISE EXTRA</h4>
-      <ul class="nav flex-column">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#workers">Workers</a></li>
-        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-        <li class="nav-item"><a class="nav-link" href="#approvals">Approvals</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="col-md-10 content">
-
-      <!-- ABOUT -->
-      <section id="about" class="card">
-  <h2>About Us</h2>
-  <p>
-    Rise Extra General Contracting delivers integrated construction services
-    across civil, infrastructure, and specialized works.
-  </p>
-</section>
-
-      <!-- SERVICES -->
-      <section id="services">
-  <h2>Our Services</h2>
-
-  <div class="services-grid">
-    <div class="service-card">Fit-Out Interior & Exterior</div>
-    <div class="service-card">Civil & Steel Structures</div>
-    <div class="service-card">Facade Works</div>
-    <div class="service-card">Landscaping</div>
-    <div class="service-card">Infrastructure</div>
-    <div class="service-card">Maintenance</div>
-    <div class="service-card">Prefab Works</div>
-  </div>
-</section>
-
-      <!-- PROJECTS -->
-      <section id="projects">
-        <h2>Our Projects</h2>
-
-       <div class="project-card">
-  <h4>Amir Fawaz Project</h4>
-  <p><b>Location:</b> Saudi Arabia</p>
-  <p><b>Scope:</b> Civil, Fit-out, MEP</p>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#workers">Workers</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#approvals">Approvals</a>
+  <a href="#contact">Contact</a>
 </div>
 
-        <div class="project-card">
-          <h5>Red Sea – Single Villas Type B</h5>
-          <p><b>Scope:</b> GRC Panels & Steel Brackets</p>
-          <p><b>Value:</b> 18.05 Million SAR</p>
-        </div>
-      </section>
+<!-- ================= MAIN CONTENT ================= -->
+<div class="main">
 
-      <!-- WORKERS -->
-      <section id="workers">
-        <h2>Our Workers</h2>
-        <p>Highly skilled workforce with strong safety culture.</p>
-      </section>
+  <!-- ================= HERO ================= -->
+  <section class="hero-pro">
+    <div class="hero-text">
+      <h1>RISE EXTRA</h1>
+      <h2>GENERAL CONTRACTING</h2>
+      <p>Your Vision. Our Foundation.</p>
+      <a href="#projects" class="hero-btn">Explore Our Projects</a>
+    </div>
+  </section>
 
-      <!-- CERTIFICATES -->
-      <section id="certificates">
-        <h2>Our Certificates</h2>
-        <ul>
-          <li>ISO 9001:2015 – Quality Management</li>
-          <li>ISO 14001:2015 – Environmental Management</li>
-          <li>ISO 45001:2018 – Occupational Health & Safety</li>
-        </ul>
-      </section>
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="section-underline"></div>
 
-      <!-- APPROVALS -->
-      <section id="approvals">
-        <h2>Our Approvals</h2>
-        <p>Government & client prequalifications across KSA.</p>
-      </section>
+    <div class="about-card">
+      <p>
+        Rise Extra General Contracting delivers integrated construction services
+        across civil, infrastructure, fit-out, and specialized works. With a
+        strong presence in Saudi Arabia, we support Vision 2030 through quality,
+        safety, and innovation.
+      </p>
+    </div>
+  </section>
 
-      <!-- CONTACT -->
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Safa, Jeddah, Saudi Arabia</p>
-        <p>📞 +966533351896</p>
-        <p>✉ info@extracosa.com</p>
-      </section>
+  <!-- ================= SERVICES ================= -->
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="section-underline"></div>
 
-    </main>
-  </div>
+    <div class="services-grid">
+      <div class="service-card">Fit-Out Interior & Exterior</div>
+      <div class="service-card">Civil & Steel Structures</div>
+      <div class="service-card">Facade Works</div>
+      <div class="service-card">Landscaping</div>
+      <div class="service-card">Infrastructure</div>
+      <div class="service-card">Maintenance</div>
+      <div class="service-card">Prefab Works</div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects">
+    <h2 class="section-title">Our Projects</h2>
+    <div class="section-underline"></div>
+
+    <div class="project-card">
+      <h3>Amir Fawaz Project</h3>
+      <div class="project-meta">
+        <strong>Location:</strong> Saudi Arabia<br />
+        <strong>PMC:</strong> Almanbar Consulting<br />
+        <strong>Scope:</strong> Civil, Fit-Out, MEP<br />
+        <strong>Main Contractor:</strong> CGCC China Overseas Construction<br />
+        <strong>Project Value:</strong> 27.93 Million SAR
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Roshan Al Arous – Jeddah</h3>
+      <div class="project-meta">
+        <strong>PMC:</strong> AJ Consultants<br />
+        <strong>Scope:</strong> Civil, Fit-Out, MEP (100 Villas)<br />
+        <strong>Main Contractor:</strong> ABR Contracting Co<br />
+        <strong>Project Value:</strong> 18.28 Million SAR
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Indian Consulate – Jeddah</h3>
+      <div class="project-meta">
+        <strong>PMC:</strong> Diyar Consultants<br />
+        <strong>Scope:</strong> Civil Structure Works<br />
+        <strong>Main Contractor:</strong> Al Masarat Contracting Co<br />
+        <strong>Project Value:</strong> 21 Million SAR
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORKERS ================= -->
+  <section id="workers">
+    <h2 class="section-title">Our Workforce</h2>
+    <div class="section-underline"></div>
+
+    <div class="about-card">
+      <p>
+        Our skilled workforce operates under strict safety standards, equipped
+        with PPE and trained according to ISO 45001 guidelines to ensure
+        efficiency, safety, and quality on every site.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATES ================= -->
+  <section id="certificates">
+    <h2 class="section-title">Our Certificates</h2>
+    <div class="section-underline"></div>
+
+    <div class="services-grid">
+      <div class="service-card">ISO 9001:2015 – Quality Management</div>
+      <div class="service-card">ISO 14001:2015 – Environmental</div>
+      <div class="service-card">ISO 45001:2018 – Occupational Safety</div>
+    </div>
+  </section>
+
+  <!-- ================= APPROVALS ================= -->
+  <section id="approvals">
+    <h2 class="section-title">Our Approvals</h2>
+    <div class="section-underline"></div>
+
+    <div class="about-card">
+      <p>
+        Approved by leading consultants and authorities including Red Sea
+        Global, Bechtel, Diyar Consultants, and government entities across KSA.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="section-underline"></div>
+
+    <div class="about-card">
+      <p>
+        <strong>Rise Extra General Contracting</strong><br /><br />
+        Safa, Jeddah, Saudi Arabia<br />
+        📞 +966 53 333 51896<br />
+        ✉ info@extracosa.com
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <strong>Rise Extra General Contracting</strong><br />
+    © 2026 – All Rights Reserved
+  </footer>
+
 </div>
 
 </body>
 </html>
-
