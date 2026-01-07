@@ -2,49 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rise Extra | Company Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rise Extra | Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- HEADER -->
-<header class="top-header">
-  <img src="assets/images/logo.jpeg" class="logo" alt="Rise Extra">
-  <h1>Company Dashboard</h1>
+<header class="header">
+  <div class="brand">
+    <img src="assets/images/logo.jpg" alt="Rise Extra Logo">
+    <h1>Company Dashboard</h1>
+  </div>
 </header>
 
 <!-- TABS -->
 <nav class="tabs">
-  <button class="tab active" data-tab="about">About</button>
-  <button class="tab" data-tab="services">Services</button>
-  <button class="tab" data-tab="projects">Projects</button>
-  <button class="tab" data-tab="workforce">Workforce</button>
-  <button class="tab" data-tab="certificates">Certificates</button>
-  <button class="tab" data-tab="contact">Contact</button>
+  <button class="tab active" onclick="openTab('about', this)">About</button>
+  <button class="tab" onclick="openTab('services', this)">Services</button>
+  <button class="tab" onclick="openTab('projects', this)">Projects</button>
+  <button class="tab" onclick="openTab('workforce', this)">Workforce</button>
+  <button class="tab" onclick="openTab('certificates', this)">Certificates</button>
+  <button class="tab" onclick="openTab('contact', this)">Contact</button>
 </nav>
 
 <!-- CONTENT -->
-<main class="content">
+<main class="container">
 
-  <!-- ABOUT -->
-  <section id="about" class="tab-section active">
+  <section id="about" class="section active">
     <h2>About Us</h2>
     <p>
       Rise Extra General Contracting delivers integrated construction services
-      across civil, infrastructure, fit-out, and specialized works. We proudly
-      support Saudi Vision 2030 through quality, safety, and innovation.
+      across Saudi Arabia. We align with Vision 2030 through quality, safety,
+      and innovation.
     </p>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="tab-section">
-    <h2>Our Services</h2>
-    <div class="grid services-grid">
+  <section id="services" class="section">
+    <h2>Services</h2>
+    <div class="grid">
       <div class="card">Fit-Out Interior & Exterior</div>
       <div class="card">Civil & Steel Structures</div>
       <div class="card">Facade Works</div>
@@ -54,61 +55,47 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="tab-section">
+  <section id="projects" class="section">
     <h2>Projects</h2>
-    <div class="grid projects-grid">
+    <div class="grid">
       <div class="card">Amir Fawaz Project – Saudi Arabia</div>
       <div class="card">Commercial Fit-Out – Jeddah</div>
-      <div class="card">Infrastructure Development – KSA</div>
     </div>
   </section>
 
-  <!-- WORKFORCE -->
-  <section id="workforce" class="tab-section">
-    <h2>Our Workforce</h2>
-    <div class="grid workforce-grid">
-      <img src="assets/images/worker1.jpeg" alt="Worker">
-      <img src="assets/images/worker2.jpeg" alt="Worker">
+  <section id="workforce" class="section">
+    <h2>Workforce</h2>
+    <div class="image-grid">
+      <img src="assets/images/worker1.jpeg">
+      <img src="assets/images/worker2.jpeg">
     </div>
   </section>
 
-  <!-- CERTIFICATES -->
-  <section id="certificates" class="tab-section">
-    <h2>Certifications</h2>
-    <div class="grid certificates-grid">
-      <img src="assets/images/cert1.jpeg" alt="Certificate">
-      <img src="assets/images/cert2.jpeg" alt="Certificate">
-      <img src="assets/images/cert3.jpeg" alt="Certificate">
+  <section id="certificates" class="section">
+    <h2>Certificates</h2>
+    <div class="image-grid small">
+      <img src="assets/images/cert1.jpeg">
+      <img src="assets/images/cert2.jpeg">
+       <img src="assets/images/cert3.jpeg">
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="tab-section">
+  <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>
-      Safa, Jeddah, Saudi Arabia<br>
-      📞 +966533351896<br>
-      ✉ info@extracosa.com
-    </p>
+    <p>Safa, Jeddah, Saudi Arabia</p>
+    <p>📞 +966533351896</p>
+    <p>✉ info@extracosa.com</p>
   </section>
 
 </main>
 
-<!-- TAB SCRIPT -->
 <script>
-  const tabs = document.querySelectorAll(".tab");
-  const sections = document.querySelectorAll(".tab-section");
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      sections.forEach(s => s.classList.remove("active"));
-
-      tab.classList.add("active");
-      document.getElementById(tab.dataset.tab).classList.add("active");
-    });
-  });
+function openTab(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
 </script>
 
 </body>
