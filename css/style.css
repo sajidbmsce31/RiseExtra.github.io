@@ -1,132 +1,131 @@
 :root {
-  --navy: #0b2340;
-  --navy-dark: #081b33;
+  --navy: #0b2342;
   --gold: #d4af37;
   --bg: #f4f7fb;
-  --white: #ffffff;
-  --text: #1f2937;
-  --muted: #6b7280;
+  --card: #ffffff;
+  --text: #2c3e50;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
 }
 
 /* HEADER */
 .header {
-  background: linear-gradient(135deg, var(--navy), var(--navy-dark));
-  padding: 30px 60px;
+  background: linear-gradient(135deg, #081a33, #0e2f5c);
+  padding: 24px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  color: white;
+  justify-content: space-between;
 }
 
-.header h1 {
-  font-size: 34px;
+.brand h1 {
+  color: #fff;
+  font-size: 28px;
   letter-spacing: 2px;
 }
 
-.header span {
-  font-size: 13px;
-  letter-spacing: 3px;
+.brand span {
   color: var(--gold);
-}
-
-.home-btn {
-  background: var(--gold);
-  color: var(--navy);
-  padding: 12px 22px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 
 /* NAV TABS */
 .nav-tabs {
-  background: white;
-  padding: 18px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  gap: 14px;
 }
 
 .tab {
-  border: none;
   background: transparent;
-  padding: 10px 22px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--muted);
+  border: none;
+  color: #dce3ef;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 500;
   cursor: pointer;
-  border-radius: 999px;
-  transition: all .3s ease;
-}
-
-.tab:hover {
-  background: rgba(212,175,55,.15);
-  color: var(--navy);
 }
 
 .tab.active {
-  background: var(--navy);
-  color: white;
-  box-shadow: 0 8px 20px rgba(11,35,64,.35);
+  background: #fff;
+  color: var(--navy);
+  box-shadow: 0 12px 25px rgba(0,0,0,.25);
+}
+
+.home-btn {
+  background: var(--gold);
+  padding: 10px 22px;
+  border-radius: 30px;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 /* CONTENT */
 .content {
-  padding: 70px 8%;
+  padding: 60px;
 }
 
-.tab-content {
+.tab-section {
   display: none;
 }
 
-.tab-content.active {
+.tab-section.active {
   display: block;
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 36px;
+  margin-bottom: 8px;
 }
 
-.line {
-  width: 70px;
+.divider {
+  width: 90px;
   height: 4px;
   background: var(--gold);
-  margin: 16px 0 30px;
-  border-radius: 10px;
+  border-radius: 5px;
+  margin-bottom: 40px;
 }
 
-/* GRID */
+/* ABOUT */
+.about-box {
+  background: linear-gradient(135deg, #0b2342, #123a6d);
+  color: #fff;
+  padding: 40px;
+  border-radius: 28px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.about-box ul li {
+  margin-bottom: 10px;
+}
+
+/* GRID & CARDS */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
 }
 
-.grid.small {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-/* CARDS */
 .card {
-  background: white;
+  background: var(--card);
   padding: 26px;
-  border-radius: 22px;
-  font-weight: 600;
+  border-radius: 20px;
   box-shadow: 0 18px 40px rgba(0,0,0,.08);
-  transition: transform .3s ease;
+  font-weight: 600;
+  transition: transform .3s;
 }
 
 .card:hover {
@@ -134,30 +133,11 @@ h2 {
 }
 
 /* PROJECTS */
-.project-card {
-  background: white;
-  padding: 34px;
-  border-radius: 26px;
-  margin-bottom: 40px;
+.project {
+  background: #fff;
   border-left: 6px solid var(--gold);
-  box-shadow: 0 18px 40px rgba(0,0,0,.08);
-}
-
-.project-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.project-card p {
-  margin: 6px 0;
-  color: var(--muted);
-}
-
-.badge {
-  float: right;
-  background: var(--navy);
-  color: white;
-  padding: 6px 16px;
-  border-radius: 999px;
-  font-size: 13px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(0,0,0,.08);
+  margin-bottom: 30px;
 }
