@@ -1,191 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <header class="dashboard-header">
-  <img src="assets/images/logo.png" alt="Rise Extra Logo" />
-</header>
 <head>
-  <meta charset="UTF-8" />
-  <title>Rise Extra | General Contracting</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Rise Extra | Company Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-  
 <body>
 
-<!-- ================= MAIN ================= -->
-<div class="main no-sidebar">
+<!-- ================= HEADER ================= -->
+<header class="dashboard-header">
+  <img src="assets/images/logo.png" alt="Rise Extra Logo">
+</header>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero-pro">
-    <div class="hero-text">
-      <h1>RISE EXTRA</h1>
-      <h2>GENERAL CONTRACTING</h2>
-      <p>
-        Delivering high-impact construction solutions across Saudi Arabia,
-        aligned with Vision 2030 and international standards.
-      </p>
-      <a href="#" class="hero-btn" onclick="openTabByName('projects')">
-        View Flagship Projects
-      </a>
-    </div>
-  </section>
-
-  <!-- ================= TABS ================= -->
-  <div class="tabs-container">
-    <div class="tabs">
-      <button class="tab-btn active" onclick="openTab(event,'about')">About</button>
-      <button class="tab-btn" onclick="openTab(event,'services')">Services</button>
-      <button class="tab-btn" onclick="openTab(event,'projects')">Projects</button>
-      <button class="tab-btn" onclick="openTab(event,'workforce')">Workforce</button>
-      <button class="tab-btn" onclick="openTab(event,'certificates')">Certificates</button>
-      <button class="tab-btn" onclick="openTab(event,'approvals')">Approvals</button>
-      <button class="tab-btn" onclick="openTab(event,'contact')">Contact</button>
-    </div>
+<!-- ================= HERO ================= -->
+<section class="dashboard-hero">
+  <div class="dashboard-hero-content">
+    <h1>RISE EXTRA</h1>
+    <h2>GENERAL CONTRACTING</h2>
+    <p>
+      Delivering high-impact construction solutions across Saudi Arabia,
+      aligned with Vision 2030 and international standards.
+    </p>
   </div>
+</section>
 
-  <!-- ================= TAB CONTENTS ================= -->
-
-  <!-- ABOUT -->
-  <div id="about" class="tab-content active">
-    <h2 class="section-title">About Us</h2>
-    <div class="section-underline"></div>
-
-    <div class="about-card">
-      <p>
-        Rise Extra General Contracting delivers integrated construction services
-        across civil, infrastructure, fit-out, and specialized works.
-        With a strong presence in Saudi Arabia, we support Vision 2030
-        through quality, safety, and innovation.
-      </p>
-    </div>
+<!-- ================= TABS ================= -->
+<div class="tabs-wrapper">
+  <div class="tabs">
+    <div class="tab active">About</div>
+    <div class="tab">Services</div>
+    <div class="tab">Projects</div>
+    <div class="tab">Workforce</div>
+    <div class="tab">Certificates</div>
+    <div class="tab">Approvals</div>
+    <div class="tab">Contact</div>
   </div>
-
-  <!-- SERVICES -->
-  <div id="services" class="tab-content">
-    <h2 class="section-title">Our Services</h2>
-    <div class="section-underline"></div>
-
-    <div class="services-grid">
-      <div class="service-card">Fit-Out Interior & Exterior</div>
-      <div class="service-card">Civil & Steel Structures</div>
-      <div class="service-card">Facade Works</div>
-      <div class="service-card">Landscaping</div>
-      <div class="service-card">Infrastructure</div>
-      <div class="service-card">Maintenance</div>
-      <div class="service-card">Prefab Works</div>
-    </div>
-  </div>
-
-  <!-- PROJECTS -->
-  <div id="projects" class="tab-content">
-    <h2 class="section-title">Our Projects</h2>
-    <div class="section-underline"></div>
-
-    <div class="project-card">
-      <h3>Amir Fawaz Project</h3>
-      <div class="project-meta">
-        <strong>Location:</strong> Saudi Arabia<br />
-        <strong>PMC:</strong> Almanbar Consulting<br />
-        <strong>Scope:</strong> Civil, Fit-Out, MEP<br />
-        <strong>Project Value:</strong> 27.93 Million SAR
-      </div>
-    </div>
-
-    <div class="project-card">
-      <h3>Indian Consulate – Jeddah</h3>
-      <div class="project-meta">
-        <strong>PMC:</strong> Diyar Consultants<br />
-        <strong>Scope:</strong> Civil Structure Works<br />
-        <strong>Project Value:</strong> 21 Million SAR
-      </div>
-    </div>
-  </div>
-
-  <!-- WORKFORCE -->
-  <div id="workforce" class="tab-content">
-    <h2 class="section-title">Our Workforce</h2>
-    <div class="section-underline"></div>
-
-    <div class="about-card">
-      <p>
-        Our workforce operates under strict safety standards,
-        equipped with certified PPE and trained to deliver excellence
-        across all construction sites.
-      </p>
-    </div>
-  </div>
-
-  <!-- CERTIFICATES -->
-  <div id="certificates" class="tab-content">
-    <h2 class="section-title">Certifications</h2>
-    <div class="section-underline"></div>
-
-    <div class="services-grid">
-      <div class="service-card">ISO 9001:2015 – Quality Management</div>
-      <div class="service-card">ISO 14001:2015 – Environmental Management</div>
-      <div class="service-card">ISO 45001:2018 – Occupational Safety</div>
-    </div>
-  </div>
-
-  <!-- APPROVALS -->
-  <div id="approvals" class="tab-content">
-    <h2 class="section-title">Approvals</h2>
-    <div class="section-underline"></div>
-
-    <div class="about-card">
-      <p>
-        Approved by major consultants, developers, and government authorities
-        across the Kingdom of Saudi Arabia.
-      </p>
-    </div>
-  </div>
-
-  <!-- CONTACT -->
-  <div id="contact" class="tab-content">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="section-underline"></div>
-
-    <div class="about-card">
-      <p>
-        <strong>Rise Extra General Contracting</strong><br /><br />
-        Safa, Jeddah, Saudi Arabia<br />
-        📞 +966 53 333 51896<br />
-        ✉ info@extracosa.com
-      </p>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <strong>Rise Extra General Contracting</strong><br />
-    © 2026 • All Rights Reserved
-  </footer>
-
 </div>
 
-<!-- ================= TAB SCRIPT ================= -->
-<script>
-function openTab(evt, tabId) {
-  const contents = document.querySelectorAll(".tab-content");
-  const tabs = document.querySelectorAll(".tab-btn");
+<!-- ================= CONTENT ================= -->
+<section class="container">
 
-  contents.forEach(c => c.classList.remove("active"));
-  tabs.forEach(t => t.classList.remove("active"));
+  <h2 class="section-title">About Us</h2>
+  <div class="section-underline"></div>
 
-  document.getElementById(tabId).classList.add("active");
-  evt.currentTarget.classList.add("active");
-}
+  <div class="content-card">
+    <p>
+      <strong>Rise Extra General Contracting</strong> delivers integrated
+      construction services across civil, infrastructure, fit-out, and
+      specialized works. With a strong presence in Saudi Arabia, we support
+      Vision 2030 through quality, safety, and innovation.
+    </p>
+  </div>
 
-function openTabByName(tabId) {
-  const btn = [...document.querySelectorAll(".tab-btn")]
-    .find(b => b.textContent.toLowerCase() === tabId);
-  if (btn) btn.click();
-}
-</script>
+</section>
+
+<section class="container">
+  <h2 class="section-title">Our Services</h2>
+  <div class="section-underline"></div>
+
+  <div class="card-grid">
+    <div class="card">Fit-Out Interior & Exterior</div>
+    <div class="card">Civil & Steel Structures</div>
+    <div class="card">Facade Works</div>
+    <div class="card">Infrastructure</div>
+    <div class="card">Maintenance</div>
+    <div class="card">Prefab Works</div>
+  </div>
+</section>
+
+<section class="container">
+  <h2 class="section-title">Contact Information</h2>
+  <div class="section-underline"></div>
+
+  <div class="content-card">
+    <p>
+      <strong>Rise Extra General Contracting</strong><br><br>
+      Safa, Jeddah, Saudi Arabia<br>
+      📞 +966 53 333 51896<br>
+      ✉ info@extracosa.com
+    </p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  © 2026 Rise Extra General Contracting. All rights reserved.
+</footer>
 
 </body>
 </html>
-
-
