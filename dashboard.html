@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" id="htmlRoot">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Rise Extra | Company Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,161 +13,134 @@
 <body>
 
 <!-- HEADER -->
-<header class="dashboard-header">
-  <img src="assets/images/logo.png" alt="Rise Extra">
-  <button class="lang-btn" onclick="toggleLang()">AR | EN</button>
+<header class="header">
+  <img src="assets/images/logo.png" class="logo" alt="Rise Extra Logo">
+  <span class="header-title">Company Dashboard</span>
 </header>
 
-<!-- HERO -->
-<section class="dashboard-hero">
-  <div class="dashboard-hero-content">
-    <h1>RISE EXTRA</h1>
-    <h2>GENERAL CONTRACTING</h2>
-    <p>
-      Delivering high-impact construction solutions across Saudi Arabia,
-      aligned with Vision 2030.
-    </p>
-  </div>
-</section>
-
-<!-- TABS -->
-<nav class="tabs-wrapper">
-  <div class="tabs">
-    <div class="tab active" data-target="about" onclick="scrollToSection('about')">About</div>
-    <div class="tab" data-target="services" onclick="scrollToSection('services')">Services</div>
-    <div class="tab" data-target="projects" onclick="scrollToSection('projects')">Projects</div>
-    <div class="tab" data-target="workforce" onclick="scrollToSection('workforce')">Workforce</div>
-    <div class="tab" data-target="certificates" onclick="scrollToSection('certificates')">Certificates</div>
-    <div class="tab" data-target="contact" onclick="scrollToSection('contact')">Contact</div>
-    <div class="tab admin" data-target="admin" onclick="scrollToSection('admin')">Admin</div>
-  </div>
+<!-- TAB BAR -->
+<nav class="tab-bar">
+  <button class="tab-btn active" onclick="openTab('about')">About</button>
+  <button class="tab-btn" onclick="openTab('services')">Services</button>
+  <button class="tab-btn" onclick="openTab('projects')">Projects</button>
+  <button class="tab-btn" onclick="openTab('workforce')">Workforce</button>
+  <button class="tab-btn" onclick="openTab('certificates')">Certificates</button>
+  <button class="tab-btn" onclick="openTab('contact')">Contact</button>
+  <button class="tab-btn admin" onclick="openTab('admin')">Admin</button>
 </nav>
 
+<!-- CONTENT -->
+<main class="content">
 
-<!-- ABOUT -->
-<section id="about" class="container">
-  <h2 class="section-title">About Us</h2>
-  <div class="section-underline"></div>
-  <div class="content-card">
-    Rise Extra General Contracting provides integrated civil, infrastructure,
-    fit-out and specialized works across Saudi Arabia.
-  </div>
-</section>
+  <!-- ABOUT -->
+  <section id="about" class="tab-content active">
+    <h2>About Rise Extra</h2>
+    <div class="card">
+      Rise Extra General Contracting is a Saudi-based construction company
+      delivering civil, infrastructure, fit-out and specialized works
+      aligned with Saudi Vision 2030.
+    </div>
+  </section>
 
-<!-- SERVICES -->
-<section id="services" class="container">
-  <h2 class="section-title">Our Services</h2>
-  <div class="section-underline"></div>
-  <div class="card-grid">
-    <div class="card">Fit-Out Interior & Exterior</div>
-    <div class="card">Civil & Steel Structures</div>
-    <div class="card">Facade Works</div>
-    <div class="card">Infrastructure</div>
-    <div class="card">Maintenance</div>
-    <div class="card">Prefab Works</div>
-  </div>
-</section>
+  <!-- SERVICES -->
+  <section id="services" class="tab-content">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">Fit-Out Interior & Exterior</div>
+      <div class="card">Civil & Steel Structures</div>
+      <div class="card">Facade Works</div>
+      <div class="card">Infrastructure</div>
+      <div class="card">Maintenance</div>
+      <div class="card">Prefab Works</div>
+    </div>
+  </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="container">
-  <h2 class="section-title">Projects</h2>
-  <div class="section-underline"></div>
-  <div class="gallery-grid">
-    <img src="assets/images/project1.jpg">
-    <img src="assets/images/project2.jpg">
-    <img src="assets/images/project3.jpg">
-  </div>
-</section>
+  <!-- PROJECTS -->
+  <section id="projects" class="tab-content">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">Commercial Complex – Jeddah</div>
+      <div class="card">Residential Towers – Riyadh</div>
+      <div class="card">Government Facility – KSA</div>
+    </div>
+  </section>
 
-<!-- WORKFORCE -->
-<section id="workforce" class="container">
-  <h2 class="section-title">Our Workforce</h2>
-  <div class="section-underline"></div>
-  <div class="gallery-grid">
-    <img src="assets/images/worker1.jpeg">
-    <img src="assets/images/worker2.jpeg">
-    <img src="assets/images/worker1.jpeg">
-  </div>
-</section>
+  <!-- WORKFORCE -->
+  <section id="workforce" class="tab-content">
+    <h2>Our Workforce</h2>
 
-<!-- CERTIFICATES -->
-<section id="certificates" class="container">
-  <h2 class="section-title">Certificates</h2>
-  <div class="section-underline"></div>
-  <div class="gallery-grid">
-    <img src="assets/images/cert1.jpeg">
-    <img src="assets/images/cert2.jpeg">
-    <img src="assets/images/cert3.jpeg">
-  </div>
-</section>
+    <div class="worker-grid">
+      <div class="worker-card">
+        <img src="assets/images/worker1.jpg" alt="Worker">
+        <span>Site Engineers</span>
+      </div>
+      <div class="worker-card">
+        <img src="assets/images/worker2.jpg" alt="Worker">
+        <span>Supervisors</span>
+      </div>
+      <div class="worker-card">
+        <img src="assets/images/worker3.jpg" alt="Worker">
+        <span>Skilled Workforce</span>
+      </div>
+      <div class="worker-card">
+        <img src="assets/images/worker4.jpg" alt="Worker">
+        <span>Safety Officers</span>
+      </div>
+    </div>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="container">
-  <h2 class="section-title">Contact</h2>
-  <div class="section-underline"></div>
-  <div class="content-card">
-    Safa, Jeddah – Saudi Arabia<br>
-    📞 +966 53 333 51896<br>
-    ✉ info@extracosa.com
-  </div>
-</section>
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="tab-content">
+    <h2>Certificates</h2>
 
-<!-- ADMIN -->
-<section id="admin" class="container">
-  <h2 class="section-title">Admin Panel</h2>
-  <div class="section-underline"></div>
-  <div class="content-card">
-    ✔ Upload Projects<br>
-    ✔ Upload Certificates<br>
-    ✔ Manage Workforce<br><br>
-    <em>(Static demo – backend can be added later)</em>
-  </div>
-</section>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <strong>ISO 9001</strong>
+        <small>Quality Management</small>
+      </div>
+      <div class="cert-card">
+        <strong>ISO 14001</strong>
+        <small>Environmental Management</small>
+      </div>
+      <div class="cert-card">
+        <strong>ISO 45001</strong>
+        <small>Occupational Safety</small>
+      </div>
+    </div>
+  </section>
 
-<footer class="footer">
-  © 2026 Rise Extra General Contracting
-</footer>
+  <!-- CONTACT -->
+  <section id="contact" class="tab-content">
+    <h2>Contact</h2>
+    <div class="card">
+      Jeddah, Saudi Arabia<br><br>
+      📞 +966 53 333 51896<br>
+      ✉ info@extracosa.com
+    </div>
+  </section>
+
+  <!-- ADMIN -->
+  <section id="admin" class="tab-content">
+    <h2>Admin Panel</h2>
+    <div class="card">
+      ✔ Manage Projects<br>
+      ✔ Upload Certificates<br>
+      ✔ Workforce Management<br><br>
+      <em>Backend integration ready</em>
+    </div>
+  </section>
+
+</main>
 
 <script>
-const tabs = document.querySelectorAll(".tab");
-const sections = document.querySelectorAll(".section");
+function openTab(id) {
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
 
-/* CLICK → SCROLL + ACTIVE */
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-
-  tabs.forEach(tab => tab.classList.remove("active"));
-  const activeTab = document.querySelector(`.tab[data-target="${id}"]`);
-  if (activeTab) activeTab.classList.add("active");
-}
-
-/* SCROLL → AUTO ACTIVE TAB */
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  tabs.forEach(tab => {
-    tab.classList.remove("active");
-    if (tab.dataset.target === current) {
-      tab.classList.add("active");
-    }
-  });
-});
-
-/* LANGUAGE TOGGLE */
-function toggleLang() {
-  const html = document.getElementById("htmlRoot");
-  html.dir = html.dir === "rtl" ? "ltr" : "rtl";
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
 }
 </script>
 
 </body>
 </html>
-
-
