@@ -1,69 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlRoot">
 <head>
   <meta charset="UTF-8">
-  <title>Rise Extra | Company Profile</title>
+  <title>Rise Extra | Company Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONTS -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="dashboard-header">
-  <img src="assets/images/logo.png" alt="Rise Extra Logo">
+  <img src="assets/images/logo.png" alt="Rise Extra">
+  <button class="lang-btn" onclick="toggleLang()">AR | EN</button>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section class="dashboard-hero">
   <div class="dashboard-hero-content">
     <h1>RISE EXTRA</h1>
     <h2>GENERAL CONTRACTING</h2>
     <p>
       Delivering high-impact construction solutions across Saudi Arabia,
-      aligned with Vision 2030 and international standards.
+      aligned with Vision 2030.
     </p>
   </div>
 </section>
 
-<!-- ================= TABS ================= -->
+<!-- TABS -->
 <div class="tabs-wrapper">
   <div class="tabs">
-    <div class="tab active">About</div>
-    <div class="tab">Services</div>
-    <div class="tab">Projects</div>
-    <div class="tab">Workforce</div>
-    <div class="tab">Certificates</div>
-    <div class="tab">Approvals</div>
-    <div class="tab">Contact</div>
+    <div class="tab active" onclick="scrollToSection('about')">About</div>
+    <div class="tab" onclick="scrollToSection('services')">Services</div>
+    <div class="tab" onclick="scrollToSection('projects')">Projects</div>
+    <div class="tab" onclick="scrollToSection('workforce')">Workforce</div>
+    <div class="tab" onclick="scrollToSection('certificates')">Certificates</div>
+    <div class="tab" onclick="scrollToSection('contact')">Contact</div>
+    <div class="tab admin" onclick="scrollToSection('admin')">Admin</div>
   </div>
 </div>
 
-<!-- ================= CONTENT ================= -->
-<section class="container">
-
+<!-- ABOUT -->
+<section id="about" class="container">
   <h2 class="section-title">About Us</h2>
   <div class="section-underline"></div>
-
   <div class="content-card">
-    <p>
-      <strong>Rise Extra General Contracting</strong> delivers integrated
-      construction services across civil, infrastructure, fit-out, and
-      specialized works. With a strong presence in Saudi Arabia, we support
-      Vision 2030 through quality, safety, and innovation.
-    </p>
+    Rise Extra General Contracting provides integrated civil, infrastructure,
+    fit-out and specialized works across Saudi Arabia.
   </div>
-
 </section>
 
-<section class="container">
+<!-- SERVICES -->
+<section id="services" class="container">
   <h2 class="section-title">Our Services</h2>
   <div class="section-underline"></div>
-
   <div class="card-grid">
     <div class="card">Fit-Out Interior & Exterior</div>
     <div class="card">Civil & Steel Structures</div>
@@ -74,25 +67,66 @@
   </div>
 </section>
 
-<section class="container">
-  <h2 class="section-title">Contact Information</h2>
+<!-- PROJECTS -->
+<section id="projects" class="container">
+  <h2 class="section-title">Projects</h2>
   <div class="section-underline"></div>
-
-  <div class="content-card">
-    <p>
-      <strong>Rise Extra General Contracting</strong><br><br>
-      Safa, Jeddah, Saudi Arabia<br>
-      📞 +966 53 333 51896<br>
-      ✉ info@extracosa.com
-    </p>
+  <div class="gallery-grid">
+    <img src="assets/images/project1.jpg">
+    <img src="assets/images/project2.jpg">
+    <img src="assets/images/project3.jpg">
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- WORKFORCE -->
+<section id="workforce" class="container">
+  <h2 class="section-title">Our Workforce</h2>
+  <div class="section-underline"></div>
+  <div class="gallery-grid">
+    <img src="assets/images/worker1.jpg">
+    <img src="assets/images/worker2.jpg">
+    <img src="assets/images/worker3.jpg">
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="container">
+  <h2 class="section-title">Certificates</h2>
+  <div class="section-underline"></div>
+  <div class="gallery-grid">
+    <img src="assets/images/cert1.jpg">
+    <img src="assets/images/cert2.jpg">
+    <img src="assets/images/cert3.jpg">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container">
+  <h2 class="section-title">Contact</h2>
+  <div class="section-underline"></div>
+  <div class="content-card">
+    Safa, Jeddah – Saudi Arabia<br>
+    📞 +966 53 333 51896<br>
+    ✉ info@extracosa.com
+  </div>
+</section>
+
+<!-- ADMIN -->
+<section id="admin" class="container">
+  <h2 class="section-title">Admin Panel</h2>
+  <div class="section-underline"></div>
+  <div class="content-card">
+    ✔ Upload Projects<br>
+    ✔ Upload Certificates<br>
+    ✔ Manage Workforce<br><br>
+    <em>(Static demo – backend can be added later)</em>
+  </div>
+</section>
+
 <footer class="footer">
-  © 2026 Rise Extra General Contracting. All rights reserved.
+  © 2026 Rise Extra General Contracting
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
-
