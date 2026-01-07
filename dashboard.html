@@ -3,130 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <title>Rise Extra | Company Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-  <div class="header-left">
-    <h1>RISE EXTRA</h1>
-    <span>GENERAL CONTRACTING</span>
-  </div>
+<!-- HEADER -->
+<header class="main-header">
+  <div class="header-inner">
+    <div class="brand">
+      <h1>RISE EXTRA</h1>
+      <span>GENERAL CONTRACTING</span>
+    </div>
 
-  <div class="header-right">
-    <!-- Replace later with logo image -->
-    <div class="logo-box">LOGO</div>
+    <nav class="top-nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects" class="active">Projects</a>
+      <a href="#workforce">Workforce</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#approvals">Approvals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="index.html" class="home-btn">← Home</a>
   </div>
 </header>
 
-<!-- ================= TABS ================= -->
-<nav class="tabs">
-  <button class="tab active" onclick="showTab('about')">About</button>
-  <button class="tab" onclick="showTab('services')">Services</button>
-  <button class="tab" onclick="showTab('projects')">Projects</button>
-  <button class="tab" onclick="showTab('workforce')">Workforce</button>
-  <button class="tab" onclick="showTab('certificates')">Certificates</button>
-  <button class="tab" onclick="showTab('approvals')">Approvals</button>
-  <button class="tab" onclick="showTab('contact')">Contact</button>
-</nav>
-
-<!-- ================= CONTENT ================= -->
-<main class="content">
-
-  <!-- ABOUT -->
-  <section id="about" class="tab-content active">
-    <h2>About Us</h2>
-    <p class="lead">
-      Rise Extra General Contracting delivers integrated construction services across
-      civil, infrastructure, fit-out and specialized works across Saudi Arabia.
-    </p>
-    <div class="info-box">
-      We support Vision 2030 through quality, safety, innovation, and sustainable construction practices.
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="tab-content">
-    <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card">Fit-Out Interior & Exterior</div>
-      <div class="card">Civil & Steel Structures</div>
-      <div class="card">Facade Works</div>
-      <div class="card">Infrastructure</div>
-      <div class="card">Maintenance</div>
-      <div class="card">Prefab Works</div>
-    </div>
-  </section>
+<!-- CONTENT -->
+<main class="container">
 
   <!-- PROJECTS -->
-  <section id="projects" class="tab-content">
-    <h2>Our Projects</h2>
+  <section id="projects">
+    <h2 class="section-title">Our Projects</h2>
+
+    <!-- PROJECT CARD -->
     <div class="project-card">
-      <strong>Amir Fawaz Project</strong>
-      <p>Scope: Civil, Fit-Out, MEP</p>
-      <p>Location: Saudi Arabia</p>
+      <div class="project-header">
+        <h3>Amir Fawaz Project</h3>
+        <span class="project-tag">Residential</span>
+      </div>
+
+      <div class="project-body">
+        <div class="project-row"><strong>PMC:</strong> Almanbar Consulting</div>
+        <div class="project-row"><strong>Scope:</strong> Civil, Fit-out, MEP</div>
+        <div class="project-row"><strong>Value:</strong> 27.93 Million SAR</div>
+      </div>
     </div>
+
     <div class="project-card">
-      <strong>Red Sea Villas</strong>
-      <p>Scope: GRC Panels & Structural Works</p>
-    </div>
-  </section>
+      <div class="project-header">
+        <h3>Red Sea – Single Villas Type B</h3>
+        <span class="project-tag">GRC Works</span>
+      </div>
 
-  <!-- WORKFORCE -->
-  <section id="workforce" class="tab-content">
-    <h2>Our Workforce</h2>
-    <div class="info-box">
-      Skilled engineers, supervisors, and certified workers trained under strict safety protocols.
+      <div class="project-body">
+        <div class="project-row"><strong>Client:</strong> Red Sea</div>
+        <div class="project-row"><strong>Scope:</strong> GRC Panels & Steel Brackets</div>
+        <div class="project-row"><strong>Value:</strong> 18.05 Million SAR</div>
+      </div>
     </div>
-  </section>
 
-  <!-- CERTIFICATES -->
-  <section id="certificates" class="tab-content">
-    <h2>Certificates</h2>
-    <div class="grid small">
-      <div class="card">ISO 9001</div>
-      <div class="card">ISO 14001</div>
-      <div class="card">ISO 45001</div>
-    </div>
-  </section>
-
-  <!-- APPROVALS -->
-  <section id="approvals" class="tab-content">
-    <h2>Approvals</h2>
-    <div class="grid small">
-      <div class="card">Red Sea Global</div>
-      <div class="card">NEOM</div>
-      <div class="card">Government Approvals</div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="tab-content">
-    <h2>Contact</h2>
-    <p>Safa, Jeddah, Saudi Arabia</p>
-    <p>📞 +966533351896</p>
-    <p>✉️ info@extracosa.com</p>
   </section>
 
 </main>
 
-<!-- ================= JS ================= -->
-<script>
-  function showTab(id) {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-
-    document.querySelector(`[onclick="showTab('${id}')"]`).classList.add('active');
-    document.getElementById(id).classList.add('active');
-  }
-</script>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>Safa, Jeddah, Saudi Arabia | +966533351896 | info@extracosa.com</p>
+</footer>
 
 </body>
 </html>
