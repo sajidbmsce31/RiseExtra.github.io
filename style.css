@@ -1,16 +1,117 @@
+/* ===== GLOBAL ===== */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f3f5f9;
+  color: #1f2937;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(10, 20, 40, 0.75), rgba(10, 20, 40, 0.75)),
+    url("assets/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
   text-align: center;
-  padding: 50px;
+  color: white;
+  max-width: 800px;
 }
 
-h1 {
-  color: #0a58ca;
+.hero h1 {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.6;
+.hero h2 {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #e5e7eb;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #d1d5db;
+}
+
+/* CTA */
+.cta-btn {
+  display: inline-block;
+  background: #c9a24d;
+  color: #0f1e36;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #e0b85f;
+  transform: translateY(-3px);
+}
+
+/* ===== ABOUT ===== */
+.about-section {
+  background: white;
+  padding: 100px 20px;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.about-card {
+  background: #f8fafc;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  border-top: 6px solid #c9a24d;
+}
+
+.about-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0f1e36;
+  color: #cbd5e1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer strong {
+  color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 42px;
+  }
 }
