@@ -2,29 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Rise Extra | Enterprise Dashboard</title>
+  <title>Rise Extra | General Contracting</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ================= SIDEBAR ================= -->
-<div class="sidebar">
-  <h1>RISE EXTRA</h1>
-
-  <a href="#" onclick="openTabByName('about')">About</a>
-  <a href="#" onclick="openTabByName('services')">Services</a>
-  <a href="#" onclick="openTabByName('projects')">Projects</a>
-  <a href="#" onclick="openTabByName('workers')">Workforce</a>
-  <a href="#" onclick="openTabByName('certificates')">Certificates</a>
-  <a href="#" onclick="openTabByName('approvals')">Approvals</a>
-  <a href="#" onclick="openTabByName('contact')">Contact</a>
-</div>
-
 <!-- ================= MAIN ================= -->
-<div class="main">
+<div class="main no-sidebar">
 
   <!-- ================= HERO ================= -->
   <section class="hero-pro">
@@ -47,7 +34,7 @@
       <button class="tab-btn active" onclick="openTab(event,'about')">About</button>
       <button class="tab-btn" onclick="openTab(event,'services')">Services</button>
       <button class="tab-btn" onclick="openTab(event,'projects')">Projects</button>
-      <button class="tab-btn" onclick="openTab(event,'workers')">Workforce</button>
+      <button class="tab-btn" onclick="openTab(event,'workforce')">Workforce</button>
       <button class="tab-btn" onclick="openTab(event,'certificates')">Certificates</button>
       <button class="tab-btn" onclick="openTab(event,'approvals')">Approvals</button>
       <button class="tab-btn" onclick="openTab(event,'contact')">Contact</button>
@@ -65,8 +52,8 @@
       <p>
         Rise Extra General Contracting delivers integrated construction services
         across civil, infrastructure, fit-out, and specialized works.
-        With a strong operational presence in Saudi Arabia, we support
-        Vision 2030 through quality, safety, and innovation.
+        With a strong presence in Saudi Arabia, we support Vision 2030
+        through quality, safety, and innovation.
       </p>
     </div>
   </div>
@@ -95,9 +82,9 @@
     <div class="project-card">
       <h3>Amir Fawaz Project</h3>
       <div class="project-meta">
-        <strong>Location:</strong> Saudi Arabia<br>
-        <strong>PMC:</strong> Almanbar Consulting<br>
-        <strong>Scope:</strong> Civil, Fit-Out, MEP<br>
+        <strong>Location:</strong> Saudi Arabia<br />
+        <strong>PMC:</strong> Almanbar Consulting<br />
+        <strong>Scope:</strong> Civil, Fit-Out, MEP<br />
         <strong>Project Value:</strong> 27.93 Million SAR
       </div>
     </div>
@@ -105,22 +92,23 @@
     <div class="project-card">
       <h3>Indian Consulate – Jeddah</h3>
       <div class="project-meta">
-        <strong>PMC:</strong> Diyar Consultants<br>
-        <strong>Scope:</strong> Civil Structure Works<br>
+        <strong>PMC:</strong> Diyar Consultants<br />
+        <strong>Scope:</strong> Civil Structure Works<br />
         <strong>Project Value:</strong> 21 Million SAR
       </div>
     </div>
   </div>
 
-  <!-- WORKERS -->
-  <div id="workers" class="tab-content">
+  <!-- WORKFORCE -->
+  <div id="workforce" class="tab-content">
     <h2 class="section-title">Our Workforce</h2>
     <div class="section-underline"></div>
 
     <div class="about-card">
       <p>
-        Our workforce operates under strict PPE and ISO 45001 safety procedures,
-        ensuring productivity, compliance, and excellence across all sites.
+        Our workforce operates under strict safety standards,
+        equipped with certified PPE and trained to deliver excellence
+        across all construction sites.
       </p>
     </div>
   </div>
@@ -131,9 +119,9 @@
     <div class="section-underline"></div>
 
     <div class="services-grid">
-      <div class="service-card">ISO 9001:2015 – Quality</div>
-      <div class="service-card">ISO 14001:2015 – Environment</div>
-      <div class="service-card">ISO 45001:2018 – Safety</div>
+      <div class="service-card">ISO 9001:2015 – Quality Management</div>
+      <div class="service-card">ISO 14001:2015 – Environmental Management</div>
+      <div class="service-card">ISO 45001:2018 – Occupational Safety</div>
     </div>
   </div>
 
@@ -144,7 +132,7 @@
 
     <div class="about-card">
       <p>
-        Approved by major developers, consultants, and government authorities
+        Approved by major consultants, developers, and government authorities
         across the Kingdom of Saudi Arabia.
       </p>
     </div>
@@ -157,9 +145,9 @@
 
     <div class="about-card">
       <p>
-        <strong>Rise Extra General Contracting</strong><br><br>
-        Safa, Jeddah, Saudi Arabia<br>
-        📞 +966 53 333 51896<br>
+        <strong>Rise Extra General Contracting</strong><br /><br />
+        Safa, Jeddah, Saudi Arabia<br />
+        📞 +966 53 333 51896<br />
         ✉ info@extracosa.com
       </p>
     </div>
@@ -167,7 +155,7 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <strong>Rise Extra General Contracting</strong><br>
+    <strong>Rise Extra General Contracting</strong><br />
     © 2026 • All Rights Reserved
   </footer>
 
@@ -195,4 +183,3 @@ function openTabByName(tabId) {
 
 </body>
 </html>
-
