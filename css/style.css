@@ -1,52 +1,136 @@
+/* ========== GLOBAL ========== */
+:root {
+  --navy: #0f1e36;
+  --gold: #c9a24d;
+  --light-bg: #f6f8fc;
+  --card-bg: #ffffff;
+  --text-dark: #1f2937;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f2ec;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--light-bg);
+  color: var(--text-dark);
 }
 
-.hero {
-  background: #1b263b;
-  color: white;
-  padding: 80px 20px;
-}
-
-.section-title {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
+/* ========== SIDEBAR ========== */
 .sidebar {
-  background: #1b263b;
-  color: white;
-  height: 100vh;
-  padding: 20px;
+  background: linear-gradient(180deg, #0f1e36, #132a4f);
+  min-height: 100vh;
+  padding: 25px 15px;
+}
+
+.sidebar h3 {
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
 }
 
 .sidebar a {
-  color: #fff;
+  display: block;
+  padding: 12px 16px;
+  color: #dbe4ff;
+  border-radius: 8px;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.content section {
-  margin-bottom: 50px;
+.sidebar a:hover {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+/* ========== MAIN CONTENT ========== */
+.content {
+  padding: 40px;
+}
+
+/* Section Titles */
+.content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.content h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: var(--gold);
+  display: block;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* ========== INFO CARD ========== */
+.card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+/* ========== SERVICES ========== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .service-card {
-  background: white;
-  margin: 10px;
-  padding: 20px;
-  border-radius: 8px;
+  background: linear-gradient(145deg, #ffffff, #f1f4fa);
+  border-radius: 14px;
+  padding: 30px 20px;
   text-align: center;
+  font-weight: 600;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+  border-top: 4px solid var(--gold);
+}
+
+/* ========== PROJECTS ========== */
 .project-card {
-  background: white;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-left: 5px solid #1b263b;
+  background: var(--card-bg);
+  border-left: 6px solid var(--gold);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
 }
 
-.footer {
-  background: #1b263b;
-  color: white;
-  padding: 20px;
+.project-card h4 {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+/* ========== TEXT ========== */
+p {
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+  }
 }
