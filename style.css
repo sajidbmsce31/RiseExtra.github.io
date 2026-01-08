@@ -1,348 +1,166 @@
-/* ==================================================
-   GOOGLE FONTS REQUIRED
-================================================== */
-/*
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-*/
-
-/* ==================================================
-   GLOBAL RESET
-================================================== */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ================= BASE ================= */
 body {
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  background: #f4f7fb;
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f8;
   color: #1f2933;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* ==================================================
-   HEADINGS
-================================================== */
-h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  color: #0b1f33;
+/* ================= HEADER ================= */
+.site-header {
+  background: #071a2f;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* ==================================================
-   LOGO HEADER
-================================================== */
-.top-header {
-  position: absolute;
-  top: 28px;
-  left: 48px;
-  z-index: 10;
-}
-
-.top-header img {
-  height: 52px;
-}
-
-/* ==================================================
-   HERO SECTION
-================================================== */
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    #0b1f33 0%,
-    #243f5e 55%,
-    #6b8ba4 100%
-  );
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 90px 24px;
+  justify-content: space-between;
 }
 
-.hero-content {
-  max-width: 900px;
-  text-align: center;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  height: 44px;
+}
+
+.brand h1 {
+  font-size: 20px;
   color: #ffffff;
+  letter-spacing: 2px;
 }
 
-.hero-content h1 {
-  font-size: 64px;
-  font-weight: 800;
-  letter-spacing: 4px;
-  color: #ffffff;
-  margin-bottom: 14px;
-}
-
-.hero-content h2 {
-  font-size: 24px;
+.brand span {
+  font-size: 11px;
+  color: #f4c430;
   letter-spacing: 3px;
-  color: #d4af37;
-  margin-bottom: 28px;
 }
 
-.hero-content p {
-  font-size: 18px;
-  color: #e6ebf1;
-  margin-bottom: 44px;
-}
-
-/* ==================================================
-   PRIMARY BUTTON
-================================================== */
-.primary-btn {
-  display: inline-block;
-  padding: 16px 48px;
-  background: linear-gradient(135deg, #d4af37, #c9a227);
-  color: #0b1f33;
-  font-weight: 700;
-  letter-spacing: 1px;
-  border-radius: 40px;
+/* Dashboard button */
+.dashboard-link {
+  background: #f4c430;
+  color: #071a2f;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+}
+
+.dashboard-link:hover {
+  background: #ddb320;
+}
+
+/* ================= HERO ================= */
+.hero-section {
+  padding: 80px 20px;
+}
+
+.hero-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.hero-container h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.hero-container p {
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ================= ACTIONS ================= */
+.hero-actions {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.primary-btn {
+  background: #071a2f;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
 
 .primary-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 40px rgba(212, 175, 55, 0.45);
+  background: #0e2a47;
 }
 
-/* ==================================================
-   MAIN CONTAINER
-================================================== */
-.container {
+.secondary-btn {
+  border: 2px solid #071a2f;
+  color: #071a2f;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.secondary-btn:hover {
+  background: #071a2f;
+  color: #ffffff;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 80px 24px;
-}
-
-/* ==================================================
-   TABS NAVIGATION (PROFESSIONAL)
-================================================== */
-.tabs {
+  padding: 16px 20px;
   display: flex;
-  gap: 14px;
-  background: #ffffff;
-  padding: 18px;
-  border-radius: 22px;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
   justify-content: space-between;
-  margin-bottom: 70px;
-}
-
-.tab {
-  flex: 1;
-  text-align: center;
-  padding: 14px 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  color: #5b6b7a;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.tab:hover {
-  background: #eef2f6;
-}
-
-.tab.active {
-  background: linear-gradient(135deg, #0b1f33, #243f5e);
-  color: #ffffff;
-  box-shadow: 0 10px 30px rgba(11, 31, 51, 0.35);
-}
-
-/* ==================================================
-   SECTION HEADINGS
-================================================== */
-.section-title {
-  font-size: 34px;
-  margin-bottom: 18px;
-}
-
-.section-underline {
-  width: 60px;
-  height: 4px;
-  background: #d4af37;
-  border-radius: 10px;
-  margin-bottom: 40px;
-}
-
-/* ==================================================
-   CARDS (SERVICES / PROJECTS)
-================================================== */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-}
-
-.card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 22px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.12);
-}
-
-.card h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-
-.card p {
-  font-size: 15px;
-  color: #4b5b6b;
-}
-
-/* ==================================================
-   FOOTER / CONTACT
-================================================== */
-.footer {
-  background: #0b1f33;
-  color: #e6ebf1;
-  padding: 50px 24px;
-  text-align: center;
-}
-
-.footer p {
-  font-size: 15px;
-}
-
-/* ==================================================
-   RESPONSIVE
-================================================== */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 42px;
-  }
-
-  .hero-content h2 {
-    font-size: 18px;
-  }
-
-  .tabs {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .tab {
-    flex: 1 1 45%;
-  }
-
-  .top-header {
-    top: 20px;
-    left: 20px;
-  }
-
-  .top-header img {
-    height: 40px;
-  }
-}
-/* ================= INDEX PREMIUM GRADIENT ================= */
-
-.index-hero {
-  min-height: 100vh;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(7, 26, 47, 0.96),
-      rgba(14, 42, 71, 0.92),
-      rgba(22, 58, 95, 0.9)
-    ),
-    radial-gradient(
-      circle at top right,
-      rgba(244, 196, 48, 0.15),
-      transparent 60%
-    );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
-  color: #ffffff;
-}
-
-/* ================= HERO CONTENT ================= */
-
-.index-content {
-  max-width: 900px;
-}
-
-.index-content h1 {
-  font-size: 54px;
-  letter-spacing: 4px;
-  margin-bottom: 10px;
-}
-
-.index-content span {
-  display: block;
-  color: #f4c430;
-  letter-spacing: 4px;
   font-size: 14px;
-  margin-bottom: 25px;
-}
-
-.index-content p {
-  font-size: 20px;
-  line-height: 1.7;
-  opacity: 0.95;
-  margin-bottom: 40px;
-}
-
-/* ================= CTA BUTTON ================= */
-
-.index-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #f4c430, #d4a21f);
-  color: #071a2f;
-  padding: 16px 40px;
-  border-radius: 40px;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: 1px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-}
-
-.index-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  color: #6b7280;
 }
 
 /* ================= MOBILE ================= */
-
 @media (max-width: 768px) {
-  .index-content h1 {
-    font-size: 38px;
+
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .index-content p {
-    font-size: 17px;
+  .hero-container h2 {
+    font-size: 30px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
   }
 }
-
-
-.index-hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: linear-gradient(
-    to top,
-    rgba(244, 196, 48, 0.15),
-    transparent
-  );
-}
-
