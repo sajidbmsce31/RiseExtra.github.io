@@ -44,7 +44,7 @@ body {
 }
 
 .logo-box img {
-  height: 48px;
+  height: 110px;
 }
 
 /* BRAND CONTAINER */
@@ -268,3 +268,33 @@ body {
     font-size: 20px;
   }
 }
+/* ===============================
+   HERO → FOOTER SMOOTH TRANSITION
+================================ */
+
+.hero-transition {
+  position: relative;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 20, 36, 0) 0%,
+    rgba(6, 20, 36, 0.6) 45%,
+    rgba(6, 20, 36, 0.85) 70%,
+    rgba(6, 20, 36, 1) 100%
+  );
+}
+
+/* REMOVE HARSH BLACK BANDS */
+.black-layer,
+.dark-strip,
+.section-divider {
+  background: transparent !important;
+}
+
+/* Ensure footer blends, not cuts */
+.site-footer {
+  margin-top: 0;
+  border-top: none;
+}
+
+
