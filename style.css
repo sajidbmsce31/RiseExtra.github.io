@@ -33,7 +33,7 @@ body {
       rgba(8, 23, 43, 0.75) 55%,
       rgba(8, 23, 43, 0.98) 100%
     ),
-    url("assets/bg-construction.png") center bottom / cover no-repeat;
+    url("assets/images/bg-construction.png") center bottom / cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -116,3 +116,4 @@ body {
     left: 20px;
   }
 }
+
