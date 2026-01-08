@@ -30,13 +30,14 @@
 <!-- TABS -->
 <div class="tabs-container">
   <div class="tabs">
-    <button class="tab active" onclick="openTab('about')">About</button>
-    <button class="tab" onclick="openTab('services')">Services</button>
-    <button class="tab" onclick="openTab('projects')">Projects</button>
-    <button class="tab" onclick="openTab('workforce')">Workforce</button>
-    <button class="tab" onclick="openTab('certificates')">Certificates</button>
-    <button class="tab" onclick="openTab('approvals')">Approvals</button>
-    <button class="tab" onclick="openTab('contact')">Contact</button>
+<button class="tab active" onclick="openTab('about', this)">About</button>
+<button class="tab" onclick="openTab('services', this)">Services</button>
+<button class="tab" onclick="openTab('projects', this)">Projects</button>
+<button class="tab" onclick="openTab('workforce', this)">Workforce</button>
+<button class="tab" onclick="openTab('certificates', this)">Certificates</button>
+<button class="tab" onclick="openTab('approvals', this)">Approvals</button>
+<button class="tab" onclick="openTab('contact', this)">Contact</button>
+
   </div>
 </div>
 
@@ -170,12 +171,12 @@
     </div>
 
     <div class="cert-box">
-      <img src="assets/images/cert2.jpeg" alt="ISO 14001">
+      <img src="assets/images/cert3.jpeg" alt="ISO 14001">
       <p>ISO 14001:2015</p>
     </div>
 
     <div class="cert-box">
-      <img src="assets/images/cert3.jpeg" alt="ISO 45001">
+      <img src="assets/images/cert2.jpeg" alt="ISO 45001">
       <p>ISO 45001:2018</p>
     </div>
   </div>
@@ -229,17 +230,33 @@
 
 
  <script type="text/javascript">
-  function openTab(tabId) {
-  document.querySelectorAll(".content").forEach(c => c.classList.remove("active"));
-  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  function openTab(tabId, el) {
+    // Hide all sections
+    document.querySelectorAll(".content").forEach(c => {
+      c.classList.remove("active");
+    });
 
-  document.getElementById(tabId).classList.add("active");
-  event.target.classList.add("active");
-}
+    // Remove active state from tabs
+    document.querySelectorAll(".tab").forEach(t => {
+      t.classList.remove("active");
+    });
 
+    // Show selected section
+    document.getElementById(tabId).classList.add("active");
+
+    // Activate clicked tab (safe)
+    if (el) el.classList.add("active");
+  }
+
+  // ✅ LOAD ABOUT BY DEFAULT (FIX)
+  document.addEventListener("DOMContentLoaded", () => {
+    const aboutTab = document.querySelector(".tab.active");
+    openTab("about", aboutTab);
+  });
 </script>
 </body>
 </html>
+
 
 
 
