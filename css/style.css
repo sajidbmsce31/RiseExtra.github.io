@@ -346,4 +346,67 @@ a {
   }
 }
 
+/* ===============================
+   DASHBOARD LOGO (MATCH INDEX)
+================================ */
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+}
+
+/* Brand container */
+.dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Logo image */
+.dashboard-logo {
+  height: 44px;
+  width: auto;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+}
+
+/* Text beside logo */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.brand-sub {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #cfd8e3;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 14px 18px;
+  }
+
+  .dashboard-logo {
+    height:100px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .brand-sub {
+    font-size: 10px;
+  }
+}
 
