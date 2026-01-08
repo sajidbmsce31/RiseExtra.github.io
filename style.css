@@ -190,7 +190,8 @@ body {
   .logo-box { left: 20px; top: 20px; }
 }
 /* ===========================
-   FOOTER (SAFE – NO CONFLICT)
+/* ===========================
+   FOOTER – PREMIUM LOGO LAYOUT
 =========================== */
 
 .site-footer {
@@ -200,8 +201,8 @@ body {
     rgba(6, 20, 36, 0.98)
   );
   color: #e6e9ee;
-  padding: 40px 20px 30px;
-  margin-top: 80px;
+  padding: 56px 20px 36px;
+  margin-top: 90px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -211,46 +212,59 @@ body {
   text-align: center;
 }
 
+/* LOGO */
+.footer-logo {
+  margin-bottom: 18px;
+}
+
+.footer-logo img {
+  height: 64px;              /* Professional size */
+  max-width: 240px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
+}
+
+/* BRAND TEXT */
 .footer-brand h3 {
   margin: 0;
   font-size: 22px;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   font-weight: 700;
 }
 
 .footer-brand p {
-  margin: 6px 0 18px;
+  margin: 6px 0 22px;
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #c9a86a; /* premium sand accent */
+  color: #c9a86a;
 }
 
+/* INFO */
 .footer-info p {
   margin: 6px 0;
   font-size: 14px;
   color: #d3d8df;
 }
 
+/* COPYRIGHT */
 .footer-copy {
-  margin-top: 22px;
+  margin-top: 26px;
   font-size: 13px;
   color: #9aa3ad;
 }
 
-/* Mobile Friendly */
+/* MOBILE */
 @media (max-width: 768px) {
   .site-footer {
-    padding: 32px 16px;
+    padding: 44px 16px 32px;
+  }
+
+  .footer-logo img {
+    height: 52px;
   }
 
   .footer-brand h3 {
     font-size: 20px;
   }
-
-  .footer-info p {
-    font-size: 13px;
-  }
 }
-
-
