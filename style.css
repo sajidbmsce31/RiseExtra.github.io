@@ -248,3 +248,87 @@ h1, h2, h3, h4 {
     height: 40px;
   }
 }
+/* ================= INDEX PREMIUM GRADIENT ================= */
+
+.index-hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(7, 26, 47, 0.96),
+      rgba(14, 42, 71, 0.92),
+      rgba(22, 58, 95, 0.9)
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(244, 196, 48, 0.15),
+      transparent 60%
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: #ffffff;
+}
+
+/* ================= HERO CONTENT ================= */
+
+.index-content {
+  max-width: 900px;
+}
+
+.index-content h1 {
+  font-size: 54px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.index-content span {
+  display: block;
+  color: #f4c430;
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.index-content p {
+  font-size: 20px;
+  line-height: 1.7;
+  opacity: 0.95;
+  margin-bottom: 40px;
+}
+
+/* ================= CTA BUTTON ================= */
+
+.index-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #f4c430, #d4a21f);
+  color: #071a2f;
+  padding: 16px 40px;
+  border-radius: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.index-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .index-content h1 {
+    font-size: 38px;
+  }
+
+  .index-content p {
+    font-size: 17px;
+  }
+}
+
+
