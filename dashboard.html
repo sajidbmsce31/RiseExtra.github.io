@@ -15,15 +15,17 @@
     <span>GENERAL CONTRACTING</span>
   </div>
 
-  <nav class="tabs">
-    <button class="tab active" data-tab="about">About</button>
-    <button class="tab" data-tab="services">Services</button>
-    <button class="tab" data-tab="projects">Projects</button>
-    <button class="tab" data-tab="workforce">Workforce</button>
-    <button class="tab" data-tab="certificates">Certificates</button>
-    <button class="tab" data-tab="approvals">Approvals</button>
-    <button class="tab" data-tab="contact">Contact</button>
-  </nav>
+<div class="tabs-wrapper">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="openTab('about')">About</button>
+    <button class="tab-btn" onclick="openTab('services')">Services</button>
+    <button class="tab-btn" onclick="openTab('projects')">Projects</button>
+    <button class="tab-btn" onclick="openTab('workforce')">Workforce</button>
+    <button class="tab-btn" onclick="openTab('certificates')">Certificates</button>
+    <button class="tab-btn" onclick="openTab('approvals')">Approvals</button>
+    <button class="tab-btn" onclick="openTab('contact')">Contact</button>
+  </div>
+</div>
 
   <a href="index.html" class="home-btn">← Home</a>
 </header>
@@ -167,3 +169,4 @@
 
 </body>
 </html>
+
