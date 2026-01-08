@@ -1,167 +1,118 @@
-/* ================= RESET ================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ================= BASE ================= */
 body {
   font-family: 'Inter', sans-serif;
-  background: #f4f6f8;
-  color: #1f2933;
-  line-height: 1.6;
+  background: #0b1d33;
+  color: #ffffff;
 }
 
-/* ================= HEADER ================= */
-.site-header {
-  background: #071a2f;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+/* HEADER */
+.top-bar {
+  position: absolute;
+  top: 24px;
+  left: 40px;
+  z-index: 10;
 }
 
 .logo {
-  height: 44px;
+  height: 52px;
 }
 
-.brand h1 {
-  font-size: 20px;
-  color: #ffffff;
-  letter-spacing: 2px;
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: 
+    linear-gradient(
+      180deg,
+      rgba(8, 23, 43, 0.95) 0%,
+      rgba(8, 23, 43, 0.75) 55%,
+      rgba(8, 23, 43, 0.98) 100%
+    ),
+    url("assets/bg-construction.png") center bottom / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 
-.brand span {
-  font-size: 11px;
-  color: #9fb7cc; /* muted steel */
+/* CONTENT */
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 800;
   letter-spacing: 3px;
 }
 
-/* Dashboard button */
-.dashboard-link {
-  background: #2f5d8a;
-  color: #ffffff;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
-
-.dashboard-link:hover {
-  background: #244a6d;
-}
-
-/* ================= HERO ================= */
-.hero-section {
-  padding: 80px 20px;
-}
-
-.hero-container {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-.hero-container h2 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: #071a2f;
-}
-
-.hero-container p {
+.hero-content h2 {
   font-size: 18px;
-  color: #4b5563;
-  max-width: 700px;
-  margin: auto;
+  letter-spacing: 4px;
+  margin-top: 8px;
+  color: #c7d2e2;
 }
 
-/* ================= ACTIONS ================= */
-.hero-actions {
-  margin-top: 40px;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
+.hero-content p {
+  margin: 32px auto;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 720px;
+  color: #d9e2ef;
 }
 
-.primary-btn {
-  background: #071a2f;
-  color: #ffffff;
-  padding: 14px 28px;
-  border-radius: 6px;
+/* CTA */
+.cta-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 15px;
   font-weight: 600;
+  color: #0b1d33;
+  background: linear-gradient(135deg, #cfd9e6, #ffffff);
+  border-radius: 50px;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
-.primary-btn:hover {
-  background: #0e2a47;
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
 }
 
-.secondary-btn {
-  border: 2px solid #2f5d8a;
-  color: #2f5d8a;
-  padding: 12px 26px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.25s ease;
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #c7d2e2;
 }
 
-.secondary-btn:hover {
-  background: #2f5d8a;
-  color: #ffffff;
+.footer span {
+  margin: 0 8px;
 }
 
-/* ================= FOOTER ================= */
-.site-footer {
-  background: #ffffff;
-  border-top: 1px solid #e5e7eb;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 16px 20px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #6b7280;
-}
-
-/* ================= MOBILE ================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-
-  .header-inner {
-    flex-direction: column;
-    gap: 16px;
+  .hero-content h1 {
+    font-size: 42px;
   }
 
-  .hero-container h2 {
-    font-size: 30px;
+  .hero-content p {
+    font-size: 16px;
   }
 
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
+  .top-bar {
+    left: 20px;
   }
 }
