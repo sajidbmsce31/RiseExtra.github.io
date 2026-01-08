@@ -1,4 +1,4 @@
-/* ================= RESET & BASE ================= */
+/* ================= BASE RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   background: #f4f6f8;
   color: #1f2937;
   line-height: 1.6;
@@ -17,35 +17,30 @@ a {
   color: inherit;
 }
 
-/* ================= COLORS ================= */
+/* ================= COLOR PALETTE ================= */
 :root {
   --navy: #071a2f;
-  --navy-soft: #0e2a47;
+  --navy-2: #0b2545;
   --steel: #2f5d8a;
-  --steel-dark: #244a6d;
-  --text-muted: #64748b;
-  --bg-light: #f4f6f8;
+  --steel-soft: #3f6f9f;
   --white: #ffffff;
+  --muted: #64748b;
+  --shadow: rgba(7, 26, 47, 0.12);
 }
 
 /* ================= HEADER ================= */
-.dashboard-header {
-  background: linear-gradient(135deg, var(--navy), var(--navy-soft));
-  padding: 24px 32px;
+.header {
+  background: linear-gradient(135deg, var(--navy), var(--navy-2));
+  padding: 22px 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.brand {
-  display: flex;
-  flex-direction: column;
-}
-
 .brand h1 {
-  color: #ffffff;
-  font-size: 24px;
+  color: white;
+  font-size: 26px;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -56,28 +51,26 @@ a {
   letter-spacing: 3px;
 }
 
-/* Home Button */
 .home-btn {
   background: var(--steel);
-  color: #ffffff;
+  color: white;
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: 600;
-  transition: 0.25s ease;
 }
 
 .home-btn:hover {
-  background: var(--steel-dark);
+  background: var(--steel-soft);
 }
 
 /* ================= TABS ================= */
-.tabs-wrapper {
-  background: var(--white);
+.tabs-container {
+  background: white;
+  margin: -25px auto 40px;
   max-width: 1200px;
-  margin: -30px auto 40px;
-  padding: 16px;
+  padding: 14px;
   border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(7, 26, 47, 0.08);
+  box-shadow: 0 20px 40px var(--shadow);
 }
 
 .tabs {
@@ -87,39 +80,37 @@ a {
   justify-content: center;
 }
 
-.tab-btn {
-  padding: 10px 24px;
+.tab {
+  padding: 10px 22px;
   border-radius: 999px;
   border: 1px solid #e5e7eb;
-  background: var(--white);
-  color: var(--text-muted);
-  font-weight: 600;
+  background: white;
   cursor: pointer;
-  transition: all 0.25s ease;
+  font-weight: 600;
+  color: var(--muted);
 }
 
-.tab-btn:hover {
+.tab:hover {
   border-color: var(--steel);
   color: var(--navy);
 }
 
-/* Active Tab */
-.tab-btn.active {
+.tab.active {
   background: linear-gradient(135deg, var(--navy), var(--steel));
-  color: #ffffff;
+  color: white;
   border: none;
-  box-shadow: 0 8px 24px rgba(7, 26, 47, 0.35);
+  box-shadow: 0 8px 25px rgba(7, 26, 47, 0.35);
 }
 
 /* ================= CONTENT ================= */
-.tab-content {
+.content {
   display: none;
   max-width: 1200px;
   margin: auto;
   padding: 20px 24px 60px;
 }
 
-.tab-content.active {
+.content.active {
   display: block;
 }
 
@@ -127,135 +118,88 @@ a {
   font-size: 32px;
   font-weight: 800;
   color: var(--navy);
-  margin-bottom: 10px;
 }
 
 .section-line {
   width: 60px;
   height: 4px;
   background: var(--steel);
+  margin: 12px 0 30px;
   border-radius: 4px;
-  margin-bottom: 30px;
 }
 
-/* ================= HERO INFO CARD ================= */
-.hero-card {
+/* ================= HERO CARD ================= */
+.hero {
   background: linear-gradient(135deg, var(--navy), var(--steel));
-  border-radius: 20px;
+  border-radius: 22px;
   padding: 32px;
-  color: #ffffff;
+  color: white;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 30px;
   margin-bottom: 40px;
 }
 
-.hero-card h3 {
+.hero h3 {
   font-size: 22px;
   margin-bottom: 12px;
 }
 
-.hero-card p {
+.hero p {
   color: #dbeafe;
 }
 
-.hero-card ul {
+.hero ul {
   list-style: none;
 }
 
-.hero-card li {
+.hero li {
   margin-bottom: 10px;
   font-weight: 600;
 }
 
-/* ================= INFO CARDS ================= */
-.card-grid {
+/* ================= CARDS ================= */
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
 }
 
 .card {
-  background: var(--white);
+  background: white;
   padding: 24px;
   border-radius: 18px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
-  transition: transform 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
 }
 
 .card h4 {
+  margin-bottom: 8px;
   color: var(--navy);
-  margin-bottom: 10px;
 }
 
-.card p {
-  color: #475569;
-  font-size: 14px;
-}
-
-/* ================= PROJECT CARDS ================= */
-.project-card {
-  background: var(--white);
-  border-radius: 20px;
-  padding: 28px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.07);
-  margin-bottom: 30px;
+/* ================= PROJECT ================= */
+.project {
+  background: white;
   border-left: 6px solid var(--steel);
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.07);
+  margin-bottom: 28px;
 }
 
-.project-card h3 {
-  color: var(--navy);
-  margin-bottom: 14px;
-}
-
-.project-card span {
-  display: inline-block;
+.project span {
   background: var(--navy);
-  color: #ffffff;
+  color: white;
   padding: 6px 14px;
   border-radius: 999px;
   font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-/* ================= CERTIFICATES ================= */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-}
-
-.cert-box {
-  background: var(--white);
-  padding: 26px;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-  font-weight: 700;
-  color: var(--navy);
-}
-
-/* ================= CONTACT ================= */
-.contact-box {
-  background: var(--white);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.07);
-}
-
-.contact-box p {
-  margin-bottom: 10px;
-  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 12px;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 900px) {
-  .hero-card {
+  .hero {
     grid-template-columns: 1fr;
   }
 }
@@ -264,15 +208,5 @@ a {
   .tabs {
     justify-content: flex-start;
     overflow-x: auto;
-    padding-bottom: 8px;
-  }
-
-  .tab-btn {
-    white-space: nowrap;
-  }
-
-  .dashboard-header {
-    text-align: center;
-    gap: 16px;
   }
 }
