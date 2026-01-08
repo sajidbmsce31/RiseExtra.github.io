@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   background:
     linear-gradient(to bottom, rgba(7,20,38,0.9), rgba(7,20,38,0.85)),
-    url("city-bg.png") center/cover no-repeat;
+    url("assets/images/bg-construction.png") center/cover no-repeat;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -189,3 +189,4 @@ body {
   .tagline { font-size: 15px; }
   .logo-box { left: 20px; top: 20px; }
 }
+
